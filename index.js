@@ -125,7 +125,7 @@ const { join } = require('path');
 
 const store = require('./lib/lightweight_store');
 const SaveCreds = require('./lib/session');
-const { app, server, PORT, HOST, configureDashboard } = require('./lib/server');
+const { app, server, PORT, HOST, configureDashboard, startRenderKeepAlive } = require('./lib/server');
 const { getChannelInfo, patchSock } = require('./lib/channelInfo');
 const { printLog } = require('./lib/print');
 const {
@@ -323,10 +323,12 @@ if (!server.listening) {
             lastChangeAt: Date.now(),
         };
         printLog('success', `Web server listening on ${HOST}:${PORT}`);
+        // Best-effort HTTP keep-alive for Render's 15-minute free-tier idle timeout.
+        startRenderKeepAlive();
     });
 }
 
-async function startQasimDev() {
+async function startWhatsAppBot() {
     try {
         let { version, isLatest } = await fetchLatestBaileysVersion();
 
@@ -380,7 +382,7 @@ async function startQasimDev() {
                     getSocket: () => QasimDev,
                     startBot: async () => {
                         if (QasimDev && QasimDev.ws) return { alreadyRunning: true };
-                        return startQasimDev();
+                        return startWhatsAppBot();
                     },
                     restartBot: async () => {
                         QasimDev.__bixRestarting = true;
@@ -388,7 +390,7 @@ async function startQasimDev() {
                             if (QasimDev?.ws && typeof QasimDev.ws.close === 'function') QasimDev.ws.close();
                         } catch {}
                         await delay(1200);
-                        return startQasimDev();
+                        return startWhatsAppBot();
                     },
                 });
             }
@@ -536,70 +538,49 @@ async function startQasimDev() {
         QasimDev.public = true;
         QasimDev.serializeM = (m) => smsg(QasimDev, m, store);
 
-        const isRegistered = state.creds?.registered === true;
+        if (state.creds?.registered === true && rl && !rl.closed) {
+            rl.close();
+            rl = null;
+        }
 
-        if (pairingCode && !isRegistered) {
-            if (useMobile) throw new Error('Cannot use pairing code with mobile api');
+        let pairingRequestStarted = false;
 
-            printLog('warning', 'Session not registered. Pairing code required');
+        QasimDev.ev.on('connection.update', async (s) => {
+            const { connection, lastDisconnect, qr } = s;
 
-            let phoneNumberInput;
-            if (global.phoneNumber) {
-                phoneNumberInput = global.phoneNumber;
-            } else if (rl && !rl.closed) {
-                phoneNumberInput = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFormat: 6281376552730 (without + or spaces) : `)));
-            } else {
-                phoneNumberInput = phoneNumber;
-                printLog('info', `Using configured owner number for pairing: ${phoneNumberInput}`);
-            }
-
-            phoneNumberInput = phoneNumberInput.replace(/[^0-9]/g, '');
-
-            const pn = require('awesome-phonenumber');
-            if (!pn('+' + phoneNumberInput).isValid()) {
-                printLog('error', 'Invalid phone number format');
-
-                if (rl && !rl.closed) {
-                    rl.close();
-                }
-                process.exit(1);
-            }
-
-            setTimeout(async () => {
+            // Baileys signals readiness for pairing through the QR update.
+            // Request the phone-number pairing code only once per socket, here,
+            // rather than immediately after makeWASocket() returns.
+            if (qr && pairingCode && state.creds?.registered !== true && !pairingRequestStarted) {
+                pairingRequestStarted = true;
                 try {
-                    let code = await QasimDev.requestPairingCode(phoneNumberInput);
-                    code = code?.match(/.{1,4}/g)?.join("-") || code;
-                    console.log(chalk.black(chalk.bgGreen(`🔗 YOUR PAIRING CODE: `)), chalk.black(chalk.white(code)));
-                    console.log(chalk.yellow(`⚠️  STEP 1: Check your WhatsApp for a pairing notification`));
-                    console.log(chalk.yellow(`⚠️  STEP 2: Accept/Approve the notification on your phone`));
-                    console.log(chalk.yellow(`⚠️  STEP 3: Go to Settings → Linked Devices → Link a Device`));
-                    console.log(chalk.yellow(`⚠️  STEP 4: Tap "Link with phone number instead"`));
-                    console.log(chalk.yellow(`⚠️  STEP 5: Enter the code above`));
-                    printLog('success', `Pairing code generated: ${code}`);
+                    if (useMobile) {
+                        throw new Error('Pairing-code login is not supported with --mobile.');
+                    }
 
+                    let pairingNumber = String(global.phoneNumber || phoneNumber || settings.ownerNumber || '').replace(/\D/g, '');
+                    if (!pairingNumber && rl && !rl.closed) {
+                        pairingNumber = String(await question(
+                            'Enter your WhatsApp number with country code (digits only): '
+                        )).replace(/\D/g, '');
+                    }
+                    if (!pairingNumber || !PhoneNumber('+' + pairingNumber).isValid()) {
+                        throw new Error('Set a valid OWNER_NUMBER or PAIRING_NUMBER including the country code.');
+                    }
+
+                    const code = await QasimDev.requestPairingCode(pairingNumber);
+                    const formattedCode = code?.match(/.{1,4}/g)?.join('-') || code;
+                    console.log(chalk.black(chalk.bgGreen('🔗 YOUR PAIRING CODE: ')), chalk.black(chalk.white(formattedCode)));
+                    console.log(chalk.yellow('Open WhatsApp → Linked Devices → Link a Device → Link with phone number instead.'));
+                    printLog('success', 'WhatsApp pairing code generated.');
                     if (rl && !rl.closed) {
                         rl.close();
                         rl = null;
                     }
                 } catch (error) {
-                    printLog('error', `Failed to get pairing code: ${error.message}`);
+                    printLog('error', `WhatsApp pairing failed: ${error?.stack || error?.message || String(error)}`);
                 }
-            }, 3000);
-        } else if (isRegistered) {
-            if (rl && !rl.closed) {
-                rl.close();
-                rl = null;
             }
-        } else {
-            printLog('warning', 'Waiting for connection to establish...');
-            if (rl && !rl.closed) {
-                rl.close();
-                rl = null;
-            }
-        }
-
-        QasimDev.ev.on('connection.update', async (s) => {
-            const { connection, lastDisconnect, qr } = s;
 
             global.__ABIX_WEB_STATE = {
                 ...(global.__ABIX_WEB_STATE || {}),
@@ -709,7 +690,7 @@ async function startQasimDev() {
                 if (shouldReconnect) {
                     printLog('connection', 'Reconnecting in 5 seconds...');
                     await delay(5000);
-                    startQasimDev();
+                    startWhatsAppBot();
                 }
             }
         });
@@ -732,7 +713,7 @@ async function startQasimDev() {
 
         return QasimDev;
     } catch (error) {
-        printLog('error', `Error in startQasimDev: ${error.message}`);
+        printLog('error', `WhatsApp startup failed: ${error?.stack || error?.message || String(error)}`);
 
         if (rl && !rl.closed) {
             rl.close();
@@ -740,7 +721,7 @@ async function startQasimDev() {
         }
 
         await delay(5000);
-        startQasimDev();
+        startWhatsAppBot();
     }
 }
 
@@ -773,7 +754,7 @@ async function main() {
 
     await delay(3000);
 
-    startQasimDev().catch(error => {
+    startWhatsAppBot().catch(error => {
         printLog('error', `Fatal error: ${error.message}`);
 
         if (rl && !rl.closed) {
