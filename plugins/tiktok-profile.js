@@ -1,11 +1,17 @@
-import {
+'use strict';
+
+const {
   fetchTikTokProfile,
   buildTikTokProfileCaption,
   fetchAvatarBuffer,
-} from '../lib/tiktok-profile-api.js';
+} = require('../lib/tiktok-profile-api.js');
 
-async function react(sock, msg, emoji) {
-  try { await sock.sendMessage(msg.key.remoteJid, { react: { text: emoji, key: msg.key } }); } catch {}
+async function react(sock, message, emoji) {
+  try {
+    await sock.sendMessage(message.key.remoteJid, {
+      react: { text: emoji, key: message.key },
+    });
+  } catch {}
 }
 
 function parseArgs(args) {
@@ -13,15 +19,16 @@ function parseArgs(args) {
   return String(args ?? '').trim();
 }
 
-export default {
-  name: 'tiktokprofile',
+module.exports = {
+  command: 'tiktokprofile',
   aliases: ['ttprofile', 'ttuser', 'tiktokuser', 'ttinfo', 'tiktokinfo'],
-  description: 'Apify se public TikTok profile details fetch karein',
+  description: 'Fetch public TikTok profile details using Apify',
   category: 'social',
 
-  async execute({ sock, msg, from, args }) {
-    const chat = from || msg?.key?.remoteJid;
-    if (!chat || !msg?.key) return;
+  async handler(sock, message, args = []) {
+    const chat = message?.key?.remoteJid;
+    if (!chat || !message?.key) return;
+
     const input = parseArgs(args);
     if (!input) {
       await sock.sendMessage(chat, {
@@ -33,29 +40,29 @@ export default {
           '┃ -ttprofile @username',
           '┃ -tiktokinfo https://www.tiktok.com/@username',
           '╰━━━━━━━━━━━━━━━━━━━━━━━━━━╯',
-          'Apify token bot ke .env mein APIFY_API_TOKEN ke naam se set karein.',
+          'Configure APIFY_API_TOKEN in Render Environment to use this command.',
         ].join('\n'),
-      }, { quoted: msg });
+      }, { quoted: message });
       return;
     }
 
-    await react(sock, msg, '⏳');
+    await react(sock, message, '⏳');
     try {
       const profile = await fetchTikTokProfile(input);
       const caption = buildTikTokProfileCaption(profile);
       const avatar = await fetchAvatarBuffer(profile.avatarUrl);
       if (avatar) {
-        await sock.sendMessage(chat, { image: avatar, caption }, { quoted: msg });
+        await sock.sendMessage(chat, { image: avatar, caption }, { quoted: message });
       } else {
-        await sock.sendMessage(chat, { text: caption }, { quoted: msg });
+        await sock.sendMessage(chat, { text: caption }, { quoted: message });
       }
-      await react(sock, msg, '✅');
+      await react(sock, message, '✅');
     } catch (error) {
       console.error('[TIKTOK PROFILE] Lookup failed:', error?.stack || error);
-      await react(sock, msg, '❌');
+      await react(sock, message, '❌');
       await sock.sendMessage(chat, {
         text: `❌ TikTok profile lookup failed: ${String(error?.message || 'Unknown error').slice(0, 220)}`,
-      }, { quoted: msg }).catch(() => {});
+      }, { quoted: message }).catch(() => {});
     }
   },
 };

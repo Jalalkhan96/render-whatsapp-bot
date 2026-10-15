@@ -1,5 +1,5 @@
 'use strict';
-const { sendDedicatedHtmlGame } = require('../../lib/dedicatedHtmlGame.cjs');
+const { sendDedicatedHtmlGame } = require('../lib/dedicatedHtmlGame.cjs');
 
 module.exports = {
   command: 'snake',

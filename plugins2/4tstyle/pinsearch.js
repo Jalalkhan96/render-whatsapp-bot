@@ -4,7 +4,7 @@ const crypto = require('crypto');
 const { downloadMediaMessage } = require('@whiskeysockets/baileys');
 const social = require('../../lib/social/socialHub');
 const { resolveWithFallback } = require('../pindl');
-const directPinterest = require('../scrape/engines/pinterest');
+const directPinterest = require('../scrape/engines/pinterest/index.cjs');
 
 const MAX_RESULTS = 5;
 const MAX_IMAGE_BYTES = 12 * 1024 * 1024;

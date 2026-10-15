@@ -13,7 +13,6 @@ data/bix-backups/
 **/*.pyo
 *.tar.gz
 *.zip
-Sliderchecking/
 docs/
 tests/
 development/
