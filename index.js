@@ -564,8 +564,13 @@ async function startWhatsAppBot() {
                             'Enter your WhatsApp number with country code (digits only): '
                         )).replace(/\D/g, '');
                     }
-                    if (!pairingNumber || !PhoneNumber('+' + pairingNumber).isValid()) {
-                        throw new Error('Set a valid OWNER_NUMBER or PAIRING_NUMBER including the country code.');
+                    // Avoid calling awesome-phonenumber here: its parser can throw
+                    // an opaque 'Internal error' in this Node/container build.
+                    // Baileys expects international digits only (country code included).
+                    if (!/^[1-9]\d{7,14}$/.test(pairingNumber)) {
+                        throw new Error(
+                            'Invalid pairing number. Set OWNER_NUMBER or PAIRING_NUMBER to 8–15 digits, including the country code, without +, spaces, or dashes.'
+                        );
                     }
 
                     const code = await QasimDev.requestPairingCode(pairingNumber);
