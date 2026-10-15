@@ -1,65 +1,41 @@
+FROM python:3.12-slim-bookworm
 
-FROM node:24-bookworm-slim AS deps
-
-WORKDIR /app
-
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-       git \
-       ca-certificates \
-       ffmpeg \
-       python3 \
-       python3-pip \
-       make \
-       g++ \
-       libfontconfig1 \
-       libfreetype6 \
-    && rm -rf /var/lib/apt/lists/* \
-    && git config --global \
-       url."https://github.com/".insteadOf "ssh://git@github.com/" \
-    && git config --global --add \
-       url."https://github.com/".insteadOf "git@github.com:"
-
-COPY package.json package-lock.json ./
-
-
-RUN npm install --omit=dev --no-audit --no-fund \
-    && npm cache clean --force
-
-
-
-FROM node:24-bookworm-slim
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    HOME=/tmp \
+    TMPDIR=/tmp
 
 WORKDIR /app
 
-ENV NODE_ENV=production \
-    HOST=0.0.0.0 \
-    PORT=10000 \
-    FFMPEG_PATH=/usr/bin/ffmpeg \
-    SESSION_DIR=/var/data/session \
-    PERSISTENT_DATA_DIR=/var/data
-
+# FFmpeg handles audio extraction and merging. Node 22 enables yt-dlp's
+# supported JavaScript challenge runtime for sites that need it (notably YouTube).
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-       git \
-       ca-certificates \
-       ffmpeg \
-       python3 \
-       python3-pip \
-       libfontconfig1 \
-       libfreetype6 \
+    && apt-get install -y --no-install-recommends ca-certificates curl ffmpeg gnupg \
+    && mkdir -p /etc/apt/keyrings \
+    && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
+       | gpg --batch --yes --dearmor -o /etc/apt/keyrings/nodesource.gpg \
+    && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" \
+       > /etc/apt/sources.list.d/nodesource.list \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends nodejs \
+    && node --version \
+    && ffmpeg -version | head -n 1 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=deps /app/node_modules ./node_modules
+COPY requirements.txt ./requirements.txt
+RUN python -m pip install --upgrade pip \
+    && python -m pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY app ./app
 
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN useradd --create-home --uid 10001 appuser \
+    && mkdir -p /tmp/video-audio-downloader \
+    && chown -R appuser:appuser /app /tmp/video-audio-downloader
 
-RUN chmod 0755 /usr/local/bin/docker-entrypoint.sh
+USER appuser
 
 EXPOSE 10000
 
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-
-CMD ["npm", "start"]
+# Render injects PORT. Locally, this falls back to 10000 unless docker-compose sets PORT=8000.
+CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000} --workers 1 --proxy-headers"]

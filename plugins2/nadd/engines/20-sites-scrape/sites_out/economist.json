@@ -1,9 +1,0 @@
-{
- "site": "The Economist",
- "home": "https://www.economist.com",
- "status": "failed",
- "articles": [],
- "errors": [
-  "homepage: HTTP Error 403: Forbidden"
- ]
-}

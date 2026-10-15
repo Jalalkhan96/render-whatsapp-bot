@@ -1,1 +1,0 @@
-{"description":"100-source image search, license and download engine. Zero dependencies, CommonJS, Node 18+.","engines":{"node":">=18"},"license":"MIT","main":"lib/engine.js","name":"image-intelligence-engine","scripts":{"health":"node scheduler/daily-health.cjs","server":"node api/server.cjs","test":"node test/test-sources.cjs"},"version":"1.0.0"}

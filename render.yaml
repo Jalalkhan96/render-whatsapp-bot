@@ -1,53 +1,26 @@
-
 services:
   - type: web
-    name: abix-ae
+    name: video-audio-downloader-api
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
     dockerContext: .
-    healthCheckPath: /healthz
+    healthCheckPath: /health
     autoDeployTrigger: commit
-
     envVars:
-      - key: NODE_ENV
-        value: production
-
-      - key: HOST
-        value: 0.0.0.0
-
-      - key: SESSION_DIR
-        value: /tmp/abix-ae/session
-
-      - key: BOT_NAME
-        value: ABIX-AE
-
-      - key: BOT_PREFIX
-        value: "-"
-
-      - key: TIMEZONE
-        value: Asia/Karachi
-
-      - key: GEMINI_BACKEND
-        value: official
-
-      - key: GEMINI_USE_WEB2API
-        value: "false"
-
-      - key: GEMINI_MODEL
-        value: gemini-3.8-flash
-
-      - key: FFMPEG_PATH
-        value: /usr/bin/ffmpeg
-
-      - key: BOT_MEMORY_WARN_MB
-        value: "350"
-
-      - key: NODE_OPTIONS
-        value: --max-old-space-size=384
-
-      - key: OWNER_NUMBER
+      - key: API_KEY
         sync: false
-
-      - key: GEMINI_API_KEY
-        sync: false
+      - key: DOWNLOAD_DIR
+        value: /tmp/video-audio-downloader
+      - key: MAX_DOWNLOAD_MB
+        value: "150"
+      - key: MAX_DURATION_SECONDS
+        value: "3600"
+      - key: MAX_ACTIVE_JOBS
+        value: "1"
+      - key: FILE_TTL_MINUTES
+        value: "10"
+      - key: SOCKET_TIMEOUT_SECONDS
+        value: "15"
+      - key: CORS_ORIGINS
+        value: "*"

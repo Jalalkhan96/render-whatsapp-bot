@@ -1,9 +1,0 @@
-{
- "site": "AP News",
- "home": "https://apnews.com",
- "status": "failed",
- "articles": [],
- "errors": [
-  "homepage: HTTP Error 403: Forbidden"
- ]
-}

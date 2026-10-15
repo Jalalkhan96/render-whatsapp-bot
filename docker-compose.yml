@@ -1,0 +1,24 @@
+services:
+  downloader-api:
+    build: .
+    container_name: video-audio-downloader-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PORT: "8000"
+      DOWNLOAD_DIR: /tmp/video-audio-downloader
+    ports:
+      - "${HOST_PORT:-8000}:8000"
+    volumes:
+      - downloader-data:/tmp/video-audio-downloader
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=512m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 128
+
+volumes:
+  downloader-data:

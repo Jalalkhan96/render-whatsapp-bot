@@ -1,8 +1,0 @@
-Dropbox integration is removed from the updated Telegram transport and environment example.
-
-After extracting the update ZIP, run `bash scripts/remove-dropbox-integration.sh` from the ABIX project root. It removes these obsolete files:
-- lib/dropboxUpload.cjs
-- plugins2/dropboxup.js
-- docs/DROPBOXUP-SOUNDCLOUD.md
-
-If your existing .env contains DROPBOX_* keys, the script first makes a timestamped backup and then removes only those DROPBOX_* lines. It does not alter your Telegram token, WhatsApp session, AI settings, or other credentials.

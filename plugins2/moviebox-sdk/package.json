@@ -1,1 +1,0 @@
-{"description":"Zero-dependency Node.js client for the MovieBox+ (com.community.oneroom v4.0.02.0903.02) API — 201 endpoints reverse-engineered from the APK.","engines":{"node":">=18"},"keywords":["moviebox","api","sdk","transsion","oneroom"],"license":"UNLICENSED","main":"index.cjs","name":"moviebox-api-sdk","scripts":{"example":"node examples/basic.cjs"},"version":"1.0.0"}

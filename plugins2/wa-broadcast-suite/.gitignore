@@ -1,6 +1,0 @@
-node_modules/
-auth/
-data/
-inbox/*
-!inbox/.gitkeep
-*.log
