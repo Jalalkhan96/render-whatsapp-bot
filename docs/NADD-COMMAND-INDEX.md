@@ -1,0 +1,141 @@
+# NADD Command Index
+
+All newly integrated suites are exposed through `plugins2/nadd/nadd-commands.js`.
+Primary menu: `-naddmenu`.
+
+
+- `-naddlinkshort`
+- `-naddlinkautoshort`
+- `-naddlinkexpand`
+- `-naddlinkunshort`
+- `-naddlinkredirecttrace`
+- `-naddlinkcheck`
+- `-naddlinkpreview`
+- `-naddlinkcleanlink`
+- `-naddlinkinfo`
+- `-naddlinkcomparelink`
+- `-naddlinkexpandbulk`
+- `-naddlinkstatus`
+- `-naddlinkhealth`
+- `-naddlinkhistory`
+- `-naddlinksearch`
+- `-naddlinkqr`
+- `-naddimage`
+- `-naddimg`
+- `-naddphoto`
+- `-naddphotos`
+- `-naddpicture`
+- `-naddpic`
+- `-naddfreeimage`
+- `-naddwallpaper`
+- `-naddillustration`
+- `-naddvector`
+- `-naddicon`
+- `-naddpublicdomain`
+- `-naddpd`
+- `-naddccimage`
+- `-naddcc0`
+- `-naddopenimage`
+- `-naddimageall`
+- `-naddbestimage`
+- `-naddcommercialimage`
+- `-naddimgurl`
+- `-naddimagecompare`
+- `-naddimagedetail`
+- `-naddimgdl`
+- `-nadddownloadimage`
+- `-naddimagestatus`
+- `-naddimagesource`
+- `-naddnext`
+- `-naddprev`
+- `-naddimagehelp`
+- `-naddmusicmenu` — aliases: `-naddmusic`, `-naddmusichelp`
+- `-naddsong` — aliases: `-naddsongsearch`, `-naddmusicsearch`, `-naddsonginfo`
+- `-naddlyrics` — aliases: `-naddlyric`
+- `-naddfindsong` — aliases: `-naddfind`
+- `-naddartist`
+- `-naddalbum`
+- `-naddsongmeaning` — aliases: `-naddmeaning`
+- `-naddsongfacts` — aliases: `-naddfacts`
+- `-naddsampled` — aliases: `-naddsamples`, `-naddinterpolation`
+- `-naddtranslatesong`
+- `-naddtrendingmusic` — aliases: `-naddtrending`
+- `-naddchart` — aliases: `-naddtopmusic`, `-naddcharts`
+- `-naddnewmusic` — aliases: `-naddnewreleases`
+- `-naddidentify`
+- `-naddidentifyvoice`
+- `-naddpklyrics`
+- `-naddurdulyrics`
+- `-naddpunjabilyrics`
+- `-naddhindilyrics`
+- `-naddknowwiki`
+- `-naddknowwikidata`
+- `-naddknowarchive`
+- `-naddknowarchiveall`
+- `-naddknowbook`
+- `-naddknowauthor`
+- `-naddknowdocument`
+- `-naddknowhistory`
+- `-naddknownewspaper`
+- `-naddknowpaper`
+- `-naddknowresearch`
+- `-naddknowdataset`
+- `-naddknowgovdata`
+- `-naddknowscience`
+- `-naddknowplace`
+- `-naddknowmapinfo`
+- `-naddknowoldphoto`
+- `-naddknowmuseum`
+- `-naddknowart`
+- `-naddknowpublicdomain`
+- `-naddknowwebarchive`
+- `-naddknowai`
+- `-naddknowknowledge`
+- `-naddknowsearchtext`
+- `-naddknowbooksearch`
+- `-naddknownext`
+- `-naddknowprev`
+- `-naddknowsourcehealth`
+- `-naddknowtestsource`
+- `-naddknowtestall`
+- `-naddknowingest`
+- `-naddknowingeststatus`
+- `-naddknowingestpause`
+- `-naddknowingestresume`
+- `-naddknowingeststop`
+- `-naddknowsource`
+- `-naddtgfind`
+- `-naddtgfindlive`
+- `-naddtgfindin`
+- `-naddtgdeepfind`
+- `-naddtgindex`
+- `-naddtgindexlist`
+- `-naddtgadd`
+- `-naddtgdel`
+- `-naddtglist`
+- `-naddtgcsearch`
+- `-naddtginfo`
+- `-naddtghelp`
+- `-naddwebtoonadd`
+- `-naddwebtooncheck`
+- `-naddwebtoonlist`
+- `-naddwebtoonremove`
+- `-naddxkcd`
+- `-naddiacomicsearch`
+- `-naddiacomicdownload`
+- `-naddiavideosearch`
+- `-naddiavideodownload`
+- `-naddcommonsvideosearch`
+- `-naddcommonsvideodownload`
+- `-nadd20sites`
+- `-nadd20site`
+- `-nadd20list`
+- `-naddscrape`
+- `-naddscrapeall`
+- `-naddscrapestatus`
+- `-naddscrapefailed`
+- `-naddscrapecategory`
+- `-naddscrapecountry`
+- `-naddscrapesearch`
+- `-naddscrapehealth`
+- `-naddscrapeschedule`

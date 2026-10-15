@@ -1,0 +1,93 @@
+{
+ "site": "DEV Community",
+ "home": "https://dev.to",
+ "status": "ok",
+ "articles": [
+  {
+   "title": "Web Development",
+   "description": "Web Development content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu EmbedCatalog is participating in Hacktoberfest 2026 Includes video and contributor perks",
+   "url": "https://dev.to/t/webdev"
+  },
+  {
+   "title": "Programming",
+   "description": "Programming content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu EmbedCatalog is participating in Hacktoberfest 2026 Includes video and contributor perks\n5 comments 2 min read We Gave AI Agents Real Tools — Then Realized “Just Ask Before Acting” Wasn’t Enough Robert Adamson Robert Adamson Robert Adamson Follow Oct 5 We Gave AI Agents Real Tools — Then Realized “Just Ask Before Acting” Wasn’t Enough # ai # security # programming # softwaredevelopment 12 reactions Comments 2 comments 6 min read AI Compliance Automation Software: Features, Architecture & Development Cost Dhruv Joshi Dhruv Joshi Dhruv Joshi Follow for Quokka Labs Oct 5 AI Compliance Automation Software: Features, Architecture & Development Cost # ai # programming # productivity # architecture 5 reactions Comments Add Comment 5 min read Does Your Favorite AI Tool's Cache Hit Mean Your Project's Uniqueness Miss? Fayaz Fayaz Fayaz Follow Oct 5 Does Your Favorite AI Tool's Cache Hit Mean Your Project's Uniqueness Miss? # ai # softwaredevelopment # programming # devchallenge 1 reaction Comments Add Comment 3 min read How I Legally Slashed Anthropic Claude API & Claude Code Bills by 70% Rahul Agarwal Rahul Agarwal Rahul Agarwal Follow Oct 5 How I Legally Slashed Anthropic Claude API & Claude Code Bills by 70% # ai # python # opensource # programming Comments 1 comment 3 min read tar checksums its headers and never your files Remdore Remdore Remdore Follow Oct 5 tar checksums its headers and never your files # linux # python # devops # programming Comments Add Comment 8 min read A declaration names what it is about. The control is somewhere it doesn't mention. howcani howcani howcani howcani howcani howcani Follow Oct 5 A declaration names what it is about. The control is somewhere it doesn't mention. # ai # webdev # devtools # programming Comments Add Comment 6 min read Building Mokoko: How I Designed a Safe, Deterministic AI Assistant for Small Business ERP Resul Öztaş Resul Öztaş Resul Öztaş Follow Oct 5 Building Mokoko: How I Designed a Safe, Deterministic AI Assistant for Small Business ERP # laravel # ai # programming # webdev Comments Add Comment 4 min read How to Set Up Graftcode's AI Coding Rules in Any IDE Opemipo Disu Opemipo Disu Opemipo Disu Follow Oct 5 How to Set Up Graftcode's AI Coding Rules in Any IDE # ai # programming # tutorial # beginners 5 reactions Comments Add Comment 7 min read HEX vs RGB vs HSL: Which Color Format Should You Use in CSS? pulkitgovrani pulkitgovrani pulkitgovrani Follow Oct 5 HEX vs RGB vs HSL: Which Color Format Should You Use in CSS? # color # webdev # programming # tutorial Comments Add Comment 2 min read I built a strict local AI for my friend so he could actually learn to code Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝",
+   "url": "https://dev.to/t/programming"
+  },
+  {
+   "title": "Productivity",
+   "description": "Productivity content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu AI Compliance Automation Software: Features, Architecture & Development Cost Dhruv Joshi Dhruv Joshi Dhruv Joshi Follow for Quokka Labs Oct 5 AI Compliance Automation Software: Features, Architecture & Development Cost # ai # programming # productivity # architecture 5 reactions Comments Add Comment 5 min read Focus Agent: A Local AI Focus Companion Built for a Friend Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝",
+   "url": "https://dev.to/t/productivity"
+  },
+  {
+   "title": "Tutorial",
+   "description": "Tutorial content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu What stateless MCP changes for gateways Ben Greenberg Ben Greenberg Ben Greenberg Follow Oct 5 What stateless MCP changes for gateways # mcp # ai # tutorial # architecture Comments Add Comment 8 min read How to Set Up Graftcode's AI Coding Rules in Any IDE Opemipo Disu Opemipo Disu Opemipo Disu Follow Oct 5 How to Set Up Graftcode's AI Coding Rules in Any IDE # ai # programming # tutorial # beginners 5 reactions Comments Add Comment 7 min read HEX vs RGB vs HSL: Which Color Format Should You Use in CSS? pulkitgovrani pulkitgovrani pulkitgovrani Follow Oct 5 HEX vs RGB vs HSL: Which Color Format Should You Use in CSS? # color # webdev # programming # tutorial Comments Add Comment 2 min read Run AI Locally on Your Mac with Ollama: Chat, Tools, RAG and a Custom Model (Real Numbers from a Mac mini M4) RainyTech RainyTech RainyTech Follow Oct 5 Run AI Locally on Your Mac with Ollama: Chat, Tools, RAG and a Custom Model (Real Numbers from a Mac mini M4) # ollama # ai # python # tutorial Comments Add Comment 5 min read Voice2Memory: Never Lose an Important Task in a Voice Note Again Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝",
+   "url": "https://dev.to/t/tutorial"
+  },
+  {
+   "title": "JavaScript",
+   "description": "JavaScript content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu EmbedCatalog is participating in Hacktoberfest 2026 Includes video and contributor perks",
+   "url": "https://dev.to/t/javascript"
+  },
+  {
+   "title": "Python",
+   "description": "Python content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu I Turned My GitHub Profile Into a Cyberpunk Console With a City Built From My Contributions Bypassing GitHub's strict sandbox via SVGs\nPicked as gem by you Comments 96 comments 15 min read The time I screwed up a conference talk (And the talk on Pydantic I would have given) Liz Liz Liz Follow Oct 4 The time I screwed up a conference talk (And the talk on Pydantic I would have given) # techtalks # devrel # python 1 reaction Comments Add Comment 11 min read How I Legally Slashed Anthropic Claude API & Claude Code Bills by 70% Rahul Agarwal Rahul Agarwal Rahul Agarwal Follow Oct 5 How I Legally Slashed Anthropic Claude API & Claude Code Bills by 70% # ai # python # opensource # programming Comments 1 comment 3 min read Kafka Just Learned to Be a Queue. Postgres Has Been One All Along. Firat Celik Firat Celik Firat Celik Follow Oct 5 Kafka Just Learned to Be a Queue. Postgres Has Been One All Along. # postgres # kafka # go # python Comments Add Comment 20 min read I Built a Support Bot That Knows When to Stop and Call a Human Shahzaib S Shahzaib S Shahzaib S Follow Oct 5 I Built a Support Bot That Knows When to Stop and Call a Human # ai # rag # python # fastapi Comments Add Comment 6 min read Making voice-agent failures reproducible with Python gj0xv gj0xv gj0xv Follow Oct 5 Making voice-agent failures reproducible with Python # python # opensource # testing # ai Comments Add Comment 4 min read SECONDO: An Offline Baking Planner for My Friend's Café, Built on Gemma and TabPFN Hacktoberfest: Maintainer Spotlight\n1 comment 8 min read Run AI Locally on Your Mac with Ollama: Chat, Tools, RAG and a Custom Model (Real Numbers from a Mac mini M4) RainyTech RainyTech RainyTech Follow Oct 5 Run AI Locally on Your Mac with Ollama: Chat, Tools, RAG and a Custom Model (Real Numbers from a Mac mini M4) # ollama # ai # python # tutorial Comments Add Comment 5 min read Atrium: a tour of the AI investigation platform I run beside Snowflake CoCo mkash25 mkash25 mkash25 Follow Oct 5 Atrium: a tour of the AI investigation platform I run beside Snowflake CoCo # ai # llm # python # agents Comments Add Comment 9 min read The 10-Millisecond Trick: How Recommenders Search Millions of Items Before You Blink Daniel Sam Pete Thiyagu Daniel Sam Pete Thiyagu Daniel Sam Pete Thiyagu Follow Oct 5 The 10-Millisecond Trick: How Recommenders Search Millions of Items Before You Blink # ai # machinelearning # datascience # python Comments Add Comment 5 min read Herding Cats: a Raspberry Pi that plans the school-activity drives, with a local LLM Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝",
+   "url": "https://dev.to/t/python"
+  },
+  {
+   "title": "Open Source",
+   "description": "Open Source content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu EmbedCatalog is participating in Hacktoberfest 2026 Includes video and contributor perks\n5 comments 2 min read ⚡ Dad Complains About Electric Bill, So I Built Him an Energy Dashboard and Found the Panels Lied ⚡ Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝\nAdd Comment 7 min read I Played Out a Broke Student's Month 500 Times on a Budget i3 Laptop With the Wi-Fi Off. It Warned Him Ahead in 4 of 5 Bad Months. Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝\n8 comments 22 min read Hacktoberfest Is Coming to Nadiad, Gujarat 🚀 Official MLH Meetup at DDU, 15 Oct Organized entirely by a solo student\nPicked as gem by you Comments 17 comments 4 min read I Built a Recipe Book for My Dadi, Using AI That Never Leaves My Laptop Hacktoberfest: Maintainer Spotlight\n2 comments 4 min read The groove is the 40 milliseconds a grid throws away, so we built a beat studio that gives them back, in a browser tab Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝\n5 comments 15 min read I Gave My AI Agents Their Own Documentation Crawler, and Pulled 60 Pages of Clean Markdown in 49 Seconds Jessica Doering Jessica Doering Jessica Doering Follow Oct 5 I Gave My AI Agents Their Own Documentation Crawler, and Pulled 60 Pages of Clean Markdown in 49 Seconds # mcp # ai # opensource # python 3 reactions Comments Add Comment 5 min read Repost : The groove is the 40 milliseconds a grid throws away, so we built a beat studio that gives them back, in a browser tab Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝\nAdd Comment 16 min read The Almirah: a 7B local vision model and 3D cabinet that keeps my friend's family papers off the cloud Shreyansh Agrahari Shreyansh Agrahari Shreyansh Agrahari Follow Oct 4 The Almirah: a 7B local vision model and 3D cabinet that keeps my friend's family papers off the cloud # devchallenge # weekendchallenge # hf26challenge # opensource 25 reactions Comments Add Comment 7 min read How I Legally Slashed Anthropic Claude API & Claude Code Bills by 70% Rahul Agarwal Rahul Agarwal Rahul Agarwal Follow Oct 5 How I Legally Slashed Anthropic Claude API & Claude Code Bills by 70% # ai # python # opensource # programming Comments 1 comment 3 min read My Dadi's Recipes Were Trapped in Voice Notes, So I Built Her an AI Cookbook Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝\nAdd Comment 3 min read I made AI coding agents race each other, and the fast one wasn't the one I expected Osman Ahmadzai Osman Ahmadzai Osman Ahmadzai Follow Oct 5 I made AI coding agents race each other, and the fast one wasn't the one I expected # showdev # ai # opensource # productivity 1 reaction Comments Add Comment 4 min read BuddyBrain: A Private, On-Device AI Companion Built for My Overwhelmed Friend Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝\nAdd Comment 3 min read Relaxicons: Turn Any Iconify Icon into a Native Component for 8 Frameworks Ravi Kishan Ravi Kishan Ravi Kishan Follow Oct 5 Relaxicons: Turn Any Iconify Icon into a Native Component for 8 Frameworks # javascript # webdev # opensource # node Comments Add Comment 11 min read The email she never saw: Missing deadlines kept my friend out of open source, so I built her a reminder that explains the rules too. Hacktoberfest Weekend Challenge: Build for a Friend Submission 🤝",
+   "url": "https://dev.to/t/opensource"
+  },
+  {
+   "title": "Security",
+   "description": "Security content on DEV Community",
+   "published": "",
+   "body": "",
+   "url": "https://dev.to/t/security"
+  },
+  {
+   "title": "Beginners",
+   "description": "Beginners content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu Hacktoberfest Is Coming to Nadiad, Gujarat 🚀 Official MLH Meetup at DDU, 15 Oct Organized entirely by a solo student",
+   "url": "https://dev.to/t/beginners"
+  },
+  {
+   "title": "Devops",
+   "description": "Devops content on DEV Community",
+   "published": "",
+   "body": "",
+   "url": "https://dev.to/t/devops"
+  },
+  {
+   "title": "Architecture",
+   "description": "Architecture content on DEV Community",
+   "published": "",
+   "body": "",
+   "url": "https://dev.to/t/architecture"
+  },
+  {
+   "title": "Automation",
+   "description": "Automation content on DEV Community",
+   "published": "",
+   "body": "👋 Sign in for the ability to sort posts by relevant , latest , or top . Right menu n8n's Postgres Node Doesn't Send Parameters. My Dry-Run Did. אחיה כהן אחיה כהן אחיה כהן Follow Oct 5 n8n's Postgres Node Doesn't Send Parameters. My Dry-Run Did. # discuss # n8n # postgres # automation Comments 1 comment 6 min read I Built a Multi-Agent AI Team to Run My Business — Here's the Architecture Hacktoberfest: Maintainer Spotlight",
+   "url": "https://dev.to/t/automation"
+  }
+ ],
+ "errors": [],
+ "links_found": 80
+}

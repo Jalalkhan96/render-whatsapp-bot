@@ -1,0 +1,9 @@
+{
+ "site": "France 24",
+ "home": "https://www.france24.com/en/",
+ "status": "failed",
+ "articles": [],
+ "errors": [
+  "homepage: HTTP Error 403: Forbidden"
+ ]
+}

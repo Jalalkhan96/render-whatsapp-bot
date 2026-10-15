@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universal Video Downloader</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode: 'class' };
+  // restore theme before paint
+  if (localStorage.getItem('uvd_theme') === 'light') document.documentElement.classList.remove('dark');
+</script>
+<style>
+  .progress-stripes { background-image: linear-gradient(45deg, rgba(255,255,255,.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.25) 50%, rgba(255,255,255,.25) 75%, transparent 75%); background-size: 1rem 1rem; animation: stripes 1s linear infinite; }
+  @keyframes stripes { to { background-position: 1rem 0; } }
+</style>
+</head>
+<body class="min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors">
+<div class="max-w-2xl mx-auto px-4 py-6 sm:py-10">
+
+  <!-- header -->
+  <header class="flex items-center justify-between mb-6">
+    <div>
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">📥 Universal Video Downloader</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">YouTube · TikTok · Instagram · Reddit · X · Facebook · Vimeo &amp; more</p>
+    </div>
+    <button id="themeBtn" class="p-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800" title="Toggle dark mode">🌓</button>
+  </header>
+
+  <!-- API key (optional) -->
+  <details class="mb-4 text-sm">
+    <summary class="cursor-pointer text-gray-500 dark:text-gray-400 hover:underline">Settings</summary>
+    <div class="mt-2 flex gap-2">
+      <input id="apiKey" type="password" placeholder="API key (only if the server requires one)"
+        class="flex-1 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm">
+      <button id="saveKey" class="px-3 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-sm">Save</button>
+    </div>
+  </details>
+
+  <!-- URL input -->
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow p-4 sm:p-6 mb-4">
+    <label class="block text-sm font-medium mb-2" for="url">Video link</label>
+    <div class="flex flex-col sm:flex-row gap-2">
+      <input id="url" type="url" placeholder="https://www.youtube.com/watch?v=…" autocomplete="off" spellcheck="false"
+        class="flex-1 px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <button id="analyzeBtn"
+        class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold disabled:opacity-50">Analyze</button>
+    </div>
+    <div id="error" class="hidden mt-3 p-3 rounded-xl bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-300 text-sm"></div>
+  </div>
+
+  <!-- preview card -->
+  <div id="preview" class="hidden bg-white dark:bg-gray-900 rounded-2xl shadow p-4 sm:p-6 mb-4">
+    <div class="flex gap-4">
+      <img id="thumb" alt="" class="w-32 h-20 sm:w-44 sm:h-28 object-cover rounded-xl bg-gray-200 dark:bg-gray-800 flex-shrink-0">
+      <div class="min-w-0">
+        <h2 id="vtitle" class="font-semibold leading-snug line-clamp-2"></h2>
+        <p id="vmeta" class="text-sm text-gray-500 dark:text-gray-400 mt-1"></p>
+        <p id="vstage" class="text-xs text-gray-400 dark:text-gray-500 mt-1"></p>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-3 mt-4">
+      <div>
+        <label class="block text-sm font-medium mb-1" for="preset">Quality preset</label>
+        <select id="preset" class="w-full px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"></select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="format">Exact format <span class="text-gray-400 font-normal">(optional)</span></label>
+        <select id="format" class="w-full px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+          <option value="">— use preset —</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-4 mt-3 text-sm">
+      <label class="flex items-center gap-2"><input id="subs" type="checkbox" class="accent-indigo-600"> Subtitles</label>
+      <label class="flex items-center gap-2"><input id="ethumb" type="checkbox" class="accent-indigo-600"> Embed thumbnail</label>
+    </div>
+
+    <button id="downloadBtn"
+      class="mt-4 w-full py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold disabled:opacity-50">Download</button>
+  </div>
+
+  <!-- progress -->
+  <div id="progressWrap" class="hidden bg-white dark:bg-gray-900 rounded-2xl shadow p-4 sm:p-6 mb-4">
+    <div class="flex justify-between text-sm mb-2">
+      <span id="pstatus" class="font-medium">Queued…</span>
+      <span id="ppct" class="tabular-nums">0%</span>
+    </div>
+    <div class="h-3 rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
+      <div id="bar" class="h-full w-0 bg-indigo-600 progress-stripes transition-all duration-500"></div>
+    </div>
+    <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
+      <span id="pspeed"></span><span id="peta"></span>
+    </div>
+    <a id="resultLink" href="#" class="hidden mt-4 block text-center py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold">⬇ Save file</a>
+    <button id="cancelBtn" class="mt-2 w-full py-2 rounded-xl border border-gray-300 dark:border-gray-700 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800">Cancel</button>
+  </div>
+
+  <!-- history -->
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow p-4 sm:p-6 mb-4">
+    <div class="flex items-center justify-between mb-2">
+      <h3 class="font-semibold">History</h3>
+      <button id="clearHist" class="text-xs text-gray-400 hover:text-red-500">clear</button>
+    </div>
+    <ul id="history" class="text-sm space-y-2"></ul>
+    <p id="noHist" class="text-sm text-gray-400">Nothing downloaded yet.</p>
+  </div>
+
+  <footer class="text-xs text-gray-400 dark:text-gray-500 text-center leading-relaxed">
+    Only download content you own or have explicit permission to download.<br>
+    DRM-protected services (Netflix, Spotify, …) are not supported.
+  </footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const state = { info: null, jobId: null, es: null };
+
+const apiKey = () => localStorage.getItem('uvd_key') || '';
+const headers = () => { const h = { 'Content-Type': 'application/json' }; if (apiKey()) h['X-API-Key'] = apiKey(); return h; };
+const withKey = url => apiKey() ? url + (url.includes('?') ? '&' : '?') + 'api_key=' + encodeURIComponent(apiKey()) : url;
+
+function showError(msg) {
+  const e = $('error');
+  e.textContent = msg;
+  e.classList.remove('hidden');
+}
+function clearError() { $('error').classList.add('hidden'); }
+
+function fmtDur(s) {
+  if (s == null) return '';
+  s = Math.round(s);
+  const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), sec = s % 60;
+  return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(sec).padStart(2, '0');
+}
+function fmtSize(b) {
+  if (b == null) return '';
+  const u = ['B', 'KB', 'MB', 'GB']; let i = 0;
+  while (b >= 1024 && i < u.length - 1) { b /= 1024; i++; }
+  return b.toFixed(1) + ' ' + u[i];
+}
+
+// ---------- analyze ----------
+$('analyzeBtn').onclick = async () => {
+  const url = $('url').value.trim();
+  if (!url) return showError('Paste a video link first.');
+  clearError();
+  $('analyzeBtn').disabled = true; $('analyzeBtn').textContent = 'Analyzing…';
+  try {
+    const r = await fetch('/api/analyze', { method: 'POST', headers: headers(), body: JSON.stringify({ url }) });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.detail || 'Analysis failed.');
+    state.info = data;
+    renderPreview(data);
+  } catch (e) { showError(e.message); }
+  finally { $('analyzeBtn').disabled = false; $('analyzeBtn').textContent = 'Analyze'; }
+};
+
+function renderPreview(d) {
+  $('preview').classList.remove('hidden');
+  $('thumb').src = d.thumbnail || '';
+  $('vtitle').textContent = d.title || '(no title)';
+  const bits = [d.platform, d.uploader, d.duration ? fmtDur(d.duration) : '' ].filter(Boolean);
+  if (d.is_playlist) bits.push(`playlist · ${d.playlist_entries.length} items`);
+  $('vmeta').textContent = bits.join(' · ');
+  $('vstage').textContent = 'Detected via: ' + d.stage_used;
+
+  const ps = $('preset'); ps.innerHTML = '';
+  d.presets.forEach(p => {
+    const o = document.createElement('option');
+    o.value = p.id; o.textContent = p.label + (p.audio_only ? '' : '');
+    ps.appendChild(o);
+  });
+  const fs = $('format');
+  fs.innerHTML = '<option value="">— use preset —</option>';
+  d.formats.forEach(f => {
+    const o = document.createElement('option');
+    o.value = f.format_id;
+    o.textContent = `${f.resolution || f.ext} · ${f.ext.toUpperCase()}${f.has_audio && f.has_video ? '' : f.has_video ? ' (video only)' : ' (audio only)'}${f.filesize ? ' · ' + fmtSize(f.filesize) : ''}`;
+    fs.appendChild(o);
+  });
+  $('progressWrap').classList.add('hidden');
+  $('preview').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ---------- download + SSE ----------
+$('downloadBtn').onclick = async () => {
+  const url = $('url').value.trim();
+  clearError();
+  $('downloadBtn').disabled = true; $('downloadBtn').textContent = 'Starting…';
+  try {
+    const body = {
+      url,
+      preset: $('preset').value || null,
+      format_id: $('format').value || null,
+      subtitles: $('subs').checked,
+      embed_thumbnail: $('ethumb').checked,
+    };
+    const r = await fetch('/api/download', { method: 'POST', headers: headers(), body: JSON.stringify(body) });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.detail || 'Download failed to start.');
+    state.jobId = data.job_id;
+    startProgress(data.job_id);
+  } catch (e) { showError(e.message); }
+  finally { $('downloadBtn').disabled = false; $('downloadBtn').textContent = 'Download'; }
+};
+
+function startProgress(jobId) {
+  $('preview').classList.add('hidden');
+  $('progressWrap').classList.remove('hidden');
+  $('resultLink').classList.add('hidden');
+  $('bar').style.width = '0%'; $('ppct').textContent = '0%';
+  $('pstatus').textContent = 'Queued…'; $('pspeed').textContent = ''; $('peta').textContent = '';
+  if (state.es) state.es.close();
+  const es = new EventSource(withKey(`/api/jobs/${jobId}/events`));
+  state.es = es;
+  es.onmessage = ev => {
+    const j = JSON.parse(ev.data);
+    const pct = Math.max(0, Math.min(100, j.progress || 0));
+    $('bar').style.width = pct + '%'; $('ppct').textContent = pct.toFixed(0) + '%';
+    $('pstatus').textContent = { queued: 'Queued…', analyzing: 'Analyzing…', downloading: 'Downloading…', processing: 'Processing…', done: 'Done ✓', failed: 'Failed' }[j.status] || j.status;
+    $('pspeed').textContent = j.speed || ''; $('peta').textContent = j.eta ? 'ETA ' + j.eta : '';
+    if (j.status === 'done') {
+      es.close();
+      $('bar').classList.remove('progress-stripes');
+      const link = $('resultLink');
+      link.href = withKey(`/api/files/${jobId}`);
+      link.download = j.filename || 'video';
+      link.classList.remove('hidden');
+      pushHistory({ title: j.title || state.info?.title || 'video', jobId, when: Date.now() });
+    } else if (j.status === 'failed') {
+      es.close();
+      showError(j.error || 'Download failed.');
+      $('pstatus').textContent = 'Failed';
+    }
+  };
+  es.onerror = () => { /* EventSource auto-retries; server closes stream on done/failed */ };
+}
+
+$('cancelBtn').onclick = async () => {
+  if (!state.jobId) return;
+  if (state.es) state.es.close();
+  await fetch(`/api/jobs/${state.jobId}`, { method: 'DELETE', headers: headers() });
+  $('pstatus').textContent = 'Cancelled';
+};
+
+// ---------- history (localStorage) ----------
+function getHist() { try { return JSON.parse(localStorage.getItem('uvd_history') || '[]'); } catch { return []; } }
+function pushHistory(item) {
+  const h = [item, ...getHist()].slice(0, 30);
+  localStorage.setItem('uvd_history', JSON.stringify(h));
+  renderHistory();
+}
+function renderHistory() {
+  const h = getHist(), ul = $('history');
+  ul.innerHTML = '';
+  $('noHist').style.display = h.length ? 'none' : '';
+  h.forEach(it => {
+    const li = document.createElement('li');
+    li.className = 'flex justify-between gap-2 items-center';
+    const a = document.createElement('a');
+    a.href = withKey(`/api/files/${it.jobId}`); a.textContent = it.title || 'video';
+    a.className = 'truncate text-indigo-600 dark:text-indigo-400 hover:underline';
+    const d = document.createElement('span');
+    d.className = 'text-xs text-gray-400 flex-shrink-0';
+    d.textContent = new Date(it.when).toLocaleDateString();
+    li.append(a, d); ul.appendChild(li);
+  });
+}
+$('clearHist').onclick = () => { localStorage.removeItem('uvd_history'); renderHistory(); };
+renderHistory();
+
+// ---------- settings ----------
+$('apiKey').value = apiKey();
+$('saveKey').onclick = () => { localStorage.setItem('uvd_key', $('apiKey').value.trim()); $('saveKey').textContent = 'Saved ✓'; setTimeout(() => $('saveKey').textContent = 'Save', 1200); };
+$('themeBtn').onclick = () => {
+  const dark = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('uvd_theme', dark ? 'dark' : 'light');
+};
+$('url').addEventListener('keydown', e => { if (e.key === 'Enter') $('analyzeBtn').click(); });
+</script>
+</body>
+</html>

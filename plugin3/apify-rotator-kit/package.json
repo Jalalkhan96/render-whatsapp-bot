@@ -1,0 +1,13 @@
+{
+  "name": "apify-rotator-kit",
+  "version": "1.0.0",
+  "description": "Multi-key rotation + auto-failover wrapper for Apify actors (TikTok, Instagram, Facebook, Reddit, Pinterest, YouTube, X, LinkedIn, Threads, Snapchat scrapers).",
+  "main": "index.js",
+  "scripts": {
+    "example": "node example.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}

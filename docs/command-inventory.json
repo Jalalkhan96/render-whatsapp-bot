@@ -1,0 +1,4870 @@
+{
+  "generated": "2026-09-28",
+  "type": "static-source-inventory",
+  "total_commands": 506,
+  "commands": [
+    {
+      "command": "8ball",
+      "aliases": [
+        "eightball",
+        "magic8ball"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/eightball.js"
+    },
+    {
+      "command": "abixadmin",
+      "aliases": [
+        "abixadministrator"
+      ],
+      "category": "owner",
+      "permission": "PRIMARY_OWNER",
+      "plugin": "plugins2/abixadmin.js"
+    },
+    {
+      "command": "add",
+      "aliases": [
+        "invite",
+        "gcadd",
+        "addgc"
+      ],
+      "category": "group",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gcadd.js"
+    },
+    {
+      "command": "addplugin",
+      "aliases": [
+        "pluginadd",
+        "uploadplugin"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/addplugin.js"
+    },
+    {
+      "command": "adminonly",
+      "aliases": [
+        "adminmode"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "advice",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_advice.js"
+    },
+    {
+      "command": "adviceslip",
+      "aliases": [
+        "adviceslipapi",
+        "dailyadvice",
+        "lifeadvice",
+        "studyadvice"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/adviceslip.js"
+    },
+    {
+      "command": "age",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_age.js"
+    },
+    {
+      "command": "aimenu",
+      "aliases": [
+        "huggingfacemenu",
+        "generatemenu"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/aimenu.js"
+    },
+    {
+      "command": "alamy",
+      "aliases": [
+        "alamydl",
+        "alamydownload"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/alamy.js"
+    },
+    {
+      "command": "alert",
+      "aliases": [
+        "alerts",
+        "weatheralert"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/alert.js"
+    },
+    {
+      "command": "alive",
+      "aliases": [
+        "status",
+        "bot"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/alive.js"
+    },
+    {
+      "command": "allmenu",
+      "aliases": [
+        "menus",
+        "menulist",
+        "showmenus"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/allmenu.js"
+    },
+    {
+      "command": "allsports",
+      "aliases": [
+        "allsportsapi"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/allsports.js"
+    },
+    {
+      "command": "amiibo",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_amiibo.js"
+    },
+    {
+      "command": "android",
+      "aliases": [
+        "an1",
+        "an1apk",
+        "apk"
+      ],
+      "category": "apks",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/android1.js"
+    },
+    {
+      "command": "animes",
+      "aliases": [
+        "animeimg",
+        "animepic"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/animes.js"
+    },
+    {
+      "command": "animu",
+      "aliases": [
+        "anime"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/anime.js"
+    },
+    {
+      "command": "anmereaction",
+      "aliases": [
+        "animereactions",
+        "reactionmenu",
+        "animeaction"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/anmereaction.js"
+    },
+    {
+      "command": "antibadword",
+      "aliases": [
+        "abw",
+        "badword",
+        "antibad"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/antibadword.js"
+    },
+    {
+      "command": "anticall",
+      "aliases": [
+        "acall",
+        "callblock"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/anticall.js"
+    },
+    {
+      "command": "antidelete",
+      "aliases": [
+        "antidel",
+        "adel"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/antidelete.js"
+    },
+    {
+      "command": "antilink",
+      "aliases": [
+        "alink",
+        "antlink",
+        "linkblock"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/antilink.js"
+    },
+    {
+      "command": "antitag",
+      "aliases": [
+        "at",
+        "tagblock"
+      ],
+      "category": "admin",
+      "permission": "PRIMARY_OWNER",
+      "plugin": "plugins/antitag.js"
+    },
+    {
+      "command": "apihealth",
+      "aliases": [
+        "apistatus"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins2/apihealth.js"
+    },
+    {
+      "command": "apkmirror",
+      "aliases": [
+        "apkmi",
+        "mirrorapk"
+      ],
+      "category": "apks",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/apkmirror.js"
+    },
+    {
+      "command": "apkpure",
+      "aliases": [
+        "apkpur",
+        "pureapk"
+      ],
+      "category": "apks",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/apkpure.js"
+    },
+    {
+      "command": "attp",
+      "aliases": [
+        "texts",
+        "textsticker"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/attp.js"
+    },
+    {
+      "command": "audiofx",
+      "aliases": [
+        "bass",
+        "blown",
+        "deep",
+        "earrape",
+        "fast",
+        "fat",
+        "nightcore",
+        "reverse",
+        "robot",
+        "slow",
+        "chipmunk"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/audiofx.js"
+    },
+    {
+      "command": "aupload",
+      "aliases": [
+        "upall",
+        "aup",
+        "toall"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-aupload.js"
+    },
+    {
+      "command": "author",
+      "aliases": [
+        "bookauthor"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "autoreact",
+      "aliases": [
+        "areact"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/areact.js"
+    },
+    {
+      "command": "autoread",
+      "aliases": [
+        "read",
+        "autoreadmsg"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/autoread.js"
+    },
+    {
+      "command": "autostatus",
+      "aliases": [
+        "autoview",
+        "statusview"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/autostatus.js"
+    },
+    {
+      "command": "autotyping",
+      "aliases": [
+        "typing",
+        "autotype"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/autotyping.js"
+    },
+    {
+      "command": "avatar",
+      "aliases": [
+        "pfp",
+        "profileavatar"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/avatar.js"
+    },
+    {
+      "command": "awoo",
+      "aliases": [
+        "awooapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/awoo.js"
+    },
+    {
+      "command": "b64",
+      "aliases": [
+        "base64",
+        "enc64"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/b64.js"
+    },
+    {
+      "command": "babar",
+      "aliases": [],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/babar.js"
+    },
+    {
+      "command": "balance",
+      "aliases": [
+        "bal",
+        "wallet",
+        "account"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "ban",
+      "aliases": [
+        "block",
+        "banuser"
+      ],
+      "category": "group",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/ban.js"
+    },
+    {
+      "command": "bank",
+      "aliases": [
+        "banking"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "base64",
+      "aliases": [
+        "b64",
+        "encode"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/base64.js"
+    },
+    {
+      "command": "bfdecode",
+      "aliases": [
+        "brun",
+        "bfread"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/bfread.js"
+    },
+    {
+      "command": "bgr",
+      "aliases": [
+        "bgrremove",
+        "airemovebg",
+        "bgremoveai"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/bgr.js"
+    },
+    {
+      "command": "bill",
+      "aliases": [
+        "checkbill",
+        "getbill"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/bill.js"
+    },
+    {
+      "command": "billscrap",
+      "aliases": [
+        "billmenu",
+        "billhelp"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/billscrap.js"
+    },
+    {
+      "command": "bing",
+      "aliases": [
+        "bingsearch"
+      ],
+      "category": "search",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/bing.js"
+    },
+    {
+      "command": "bird",
+      "aliases": [
+        "birdapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/bird.js"
+    },
+    {
+      "command": "bitcoin",
+      "aliases": [
+        "bitcoinapi"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/bitcoin.js"
+    },
+    {
+      "command": "bite",
+      "aliases": [
+        "biteapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/bite.js"
+    },
+    {
+      "command": "blur",
+      "aliases": [
+        "blurimg",
+        "blurpic"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/img-blur.js"
+    },
+    {
+      "command": "blush",
+      "aliases": [
+        "blushapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/blush.js"
+    },
+    {
+      "command": "bonk",
+      "aliases": [
+        "bonkapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/bonk.js"
+    },
+    {
+      "command": "book",
+      "aliases": [],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "bored",
+      "aliases": [
+        "boredapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/bored.js"
+    },
+    {
+      "command": "brainfuck",
+      "aliases": [
+        "bfcode",
+        "obfuscate"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/brainfuck.js"
+    },
+    {
+      "command": "cache",
+      "aliases": [
+        "clearcache",
+        "npmcache",
+        "cleancache"
+      ],
+      "category": "system",
+      "permission": "OWNER",
+      "plugin": "plugins2/cache.js"
+    },
+    {
+      "command": "canvas",
+      "aliases": [
+        "canvas",
+        "overlay"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/canvas.js"
+    },
+    {
+      "command": "capcut",
+      "aliases": [
+        "capcutdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/abixsocial.js"
+    },
+    {
+      "command": "cat",
+      "aliases": [
+        "catapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cat.js"
+    },
+    {
+      "command": "catbox",
+      "aliases": [
+        "cb"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-catbox.js"
+    },
+    {
+      "command": "catfact",
+      "aliases": [
+        "catfactapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/catfact.js"
+    },
+    {
+      "command": "cgpa",
+      "aliases": [],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "channelid",
+      "aliases": [
+        "newsletterid"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/channelid.js"
+    },
+    {
+      "command": "character",
+      "aliases": [
+        "personality",
+        "traits"
+      ],
+      "category": "group",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/character.js"
+    },
+    {
+      "command": "chatbot",
+      "aliases": [
+        "achat"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/chatbot.js"
+    },
+    {
+      "command": "chatgpt",
+      "aliases": [],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/chatgpt.js"
+    },
+    {
+      "command": "chess",
+      "aliases": [
+        "chessapi"
+      ],
+      "category": "esports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/chess.js"
+    },
+    {
+      "command": "chhistory",
+      "aliases": [
+        "oldposts",
+        "chlist"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/historysniff.js"
+    },
+    {
+      "command": "chuck",
+      "aliases": [
+        "chuckapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/chuck.js"
+    },
+    {
+      "command": "chucknorris",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_chucknorris.js"
+    },
+    {
+      "command": "citation",
+      "aliases": [
+        "cite"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "claude",
+      "aliases": [],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/claude.js"
+    },
+    {
+      "command": "clear",
+      "aliases": [
+        "clr",
+        "clean"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/clear.js"
+    },
+    {
+      "command": "clearcache",
+      "aliases": [
+        "clearstorage"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/clearcache.js"
+    },
+    {
+      "command": "clearsession",
+      "aliases": [
+        "clearses",
+        "csession"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/clearsession.js"
+    },
+    {
+      "command": "cleartmp",
+      "aliases": [
+        "cleartemp",
+        "tmpclear"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/cleartmp.js"
+    },
+    {
+      "command": "coding",
+      "aliases": [
+        "codingimg",
+        "programming",
+        "programmingimg"
+      ],
+      "category": "images",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/codingImg.js"
+    },
+    {
+      "command": "coffee",
+      "aliases": [
+        "coffeeapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/coffee.js"
+    },
+    {
+      "command": "compliment",
+      "aliases": [
+        "praise",
+        "nice"
+      ],
+      "category": "group",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/compliment.js"
+    },
+    {
+      "command": "convert",
+      "aliases": [
+        "unit",
+        "unitconvert"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/conversion.js"
+    },
+    {
+      "command": "cooldown",
+      "aliases": [
+        "cd",
+        "cmdcooldown"
+      ],
+      "category": "owner",
+      "permission": "PRIMARY_OWNER",
+      "plugin": "plugins/cooldown.js"
+    },
+    {
+      "command": "count",
+      "aliases": [],
+      "category": "group",
+      "permission": "GROUP_ONLY",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "country",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_country.js"
+    },
+    {
+      "command": "creact",
+      "aliases": [
+        "cmdreact"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/cmdreact.js"
+    },
+    {
+      "command": "cricket",
+      "aliases": [
+        "cricketapi",
+        "cric",
+        "livecricket"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricket-live.js"
+    },
+    {
+      "command": "cricketball",
+      "aliases": [
+        "cricball"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricbuzz.js"
+    },
+    {
+      "command": "cricketimage",
+      "aliases": [
+        "cricimage",
+        "cricketphotos"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricbuzz.js"
+    },
+    {
+      "command": "cricketlive",
+      "aliases": [
+        "criclivebuzz"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricbuzz.js"
+    },
+    {
+      "command": "cricketnews",
+      "aliases": [
+        "cricnewsbuzz"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricbuzz.js"
+    },
+    {
+      "command": "cricketonlymenu",
+      "aliases": [
+        "cricketmenubuzz"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricbuzz.js"
+    },
+    {
+      "command": "crickettrack",
+      "aliases": [
+        "crictrack"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricbuzz.js"
+    },
+    {
+      "command": "cricketvideo",
+      "aliases": [
+        "cricvideo"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cricbuzz.js"
+    },
+    {
+      "command": "cricmenu",
+      "aliases": [
+        "cricketmenu"
+      ],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/cricket.js"
+    },
+    {
+      "command": "cringe",
+      "aliases": [
+        "cringeapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cringe.js"
+    },
+    {
+      "command": "crop",
+      "aliases": [
+        "stickercrop",
+        "scrop"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/stickercrop.js"
+    },
+    {
+      "command": "cry",
+      "aliases": [
+        "cryapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cry.js"
+    },
+    {
+      "command": "crypto",
+      "aliases": [
+        "coin",
+        "price"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/crypto.js"
+    },
+    {
+      "command": "cuddle",
+      "aliases": [
+        "cuddleapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/cuddle.js"
+    },
+    {
+      "command": "currency",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_currency.js"
+    },
+    {
+      "command": "customqr",
+      "aliases": [
+        "makeqr",
+        "qrgen"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/qrcustom.js"
+    },
+    {
+      "command": "cyberimg",
+      "aliases": [
+        "cyber",
+        "cyberspace"
+      ],
+      "category": "images",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/cyberImg.js"
+    },
+    {
+      "command": "dadjoke",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_dadjoke.js"
+    },
+    {
+      "command": "dado",
+      "aliases": [
+        "dados",
+        "dice"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/dado.js"
+    },
+    {
+      "command": "daily",
+      "aliases": [
+        "claim",
+        "dailyclaim"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "dance",
+      "aliases": [
+        "danceapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/dance.js"
+    },
+    {
+      "command": "dare",
+      "aliases": [
+        "truthordare",
+        "challenge"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/dare.js"
+    },
+    {
+      "command": "datefact",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_datefact.js"
+    },
+    {
+      "command": "deepseek",
+      "aliases": [],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/deepseek.js"
+    },
+    {
+      "command": "define",
+      "aliases": [
+        "dict",
+        "urban"
+      ],
+      "category": "search",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/define.js"
+    },
+    {
+      "command": "delcmd",
+      "aliases": [
+        "removecmd"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/delcmd.js"
+    },
+    {
+      "command": "delete",
+      "aliases": [
+        "del",
+        "remove"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/delete.js"
+    },
+    {
+      "command": "delplugin",
+      "aliases": [
+        "deleteplugin",
+        "rmplugin"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/delplugin.js"
+    },
+    {
+      "command": "demote",
+      "aliases": [
+        "dmt",
+        "removeadmin"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/demote.js"
+    },
+    {
+      "command": "deposit",
+      "aliases": [
+        "dep",
+        "bankdep"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "dictionary",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_dictionary.js"
+    },
+    {
+      "command": "dinorunner",
+      "aliases": [
+        "dinorun"
+      ],
+      "category": "game",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/dinorunner.js"
+    },
+    {
+      "command": "dl",
+      "aliases": [
+        "download",
+        "downloader",
+        "yt",
+        "ig",
+        "fb",
+        "tw",
+        "tt",
+        "sn",
+        "youtube",
+        "instagram",
+        "facebook",
+        "tiktok",
+        "twitter"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/downloader/dl.js"
+    },
+    {
+      "command": "dlstatus",
+      "aliases": [
+        "swdl",
+        "statusdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/statusdl.js"
+    },
+    {
+      "command": "dog",
+      "aliases": [
+        "dogapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/dog.js"
+    },
+    {
+      "command": "dogfact",
+      "aliases": [
+        "dogfactapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/dogfact.js"
+    },
+    {
+      "command": "doi",
+      "aliases": [],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "dota2",
+      "aliases": [
+        "dota2api"
+      ],
+      "category": "esports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/dota2.js"
+    },
+    {
+      "command": "douyindl",
+      "aliases": [
+        "douyin"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/abixsocial.js"
+    },
+    {
+      "command": "download",
+      "aliases": [
+        "dlfile",
+        "fetch"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/download.js"
+    },
+    {
+      "command": "downloadvideo",
+      "aliases": [
+        "dlvideo",
+        "dvideo",
+        "ytvideo"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/downloadvideo.js"
+    },
+    {
+      "command": "duck",
+      "aliases": [
+        "duckapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/duck.js"
+    },
+    {
+      "command": "echo",
+      "aliases": [],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/echo.js"
+    },
+    {
+      "command": "editormenu",
+      "aliases": [
+        "editor",
+        "xmlmenu"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/editormenu.js"
+    },
+    {
+      "command": "edumenu",
+      "aliases": [
+        "education",
+        "edu"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/edumenu.js"
+    },
+    {
+      "command": "element",
+      "aliases": [],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "emailcheck",
+      "aliases": [
+        "emailvalidate",
+        "mailcheck"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/emailcheck.js"
+    },
+    {
+      "command": "emojimix",
+      "aliases": [
+        "mixemoji",
+        "emix"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/emojimix.js"
+    },
+    {
+      "command": "entropy",
+      "aliases": [
+        "passwordentropy",
+        "entropyscan"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/entropy.js"
+    },
+    {
+      "command": "ephoto",
+      "aliases": [
+        "tmaker",
+        "textmaker"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/textmaker.js"
+    },
+    {
+      "command": "esportmenu",
+      "aliases": [
+        "esportmenu2",
+        "esports",
+        "esportplugin",
+        "esport"
+      ],
+      "category": "esports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "esportplugin/esportmenu.js"
+    },
+    {
+      "command": "excard",
+      "aliases": [],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/exad.js"
+    },
+    {
+      "command": "excuse",
+      "aliases": [
+        "excuseapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/excuse.js"
+    },
+    {
+      "command": "f1",
+      "aliases": [
+        "f1api"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/f1.js"
+    },
+    {
+      "command": "facebook",
+      "aliases": [
+        "fbdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/facebook.js"
+    },
+    {
+      "command": "fact",
+      "aliases": [
+        "randomfact",
+        "uselessfact"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/fact.js"
+    },
+    {
+      "command": "fakeffduo",
+      "aliases": [
+        "ffduo"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/fakeffduo.js"
+    },
+    {
+      "command": "fakeml",
+      "aliases": [
+        "fml"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/fakeml.js"
+    },
+    {
+      "command": "fbmenu",
+      "aliases": [
+        "facebookmenu"
+      ],
+      "category": "social",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/fbmenu.js"
+    },
+    {
+      "command": "fbsearch",
+      "aliases": [
+        "fbs",
+        "facebooksearch",
+        "fb-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/fbsearch.js"
+    },
+    {
+      "command": "feedback",
+      "aliases": [
+        "suggest",
+        "request"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/feedback.js"
+    },
+    {
+      "command": "fetch",
+      "aliases": [
+        "get"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/fetch.js"
+    },
+    {
+      "command": "find",
+      "aliases": [
+        "lookup",
+        "searchcmd"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/searchcmd.js"
+    },
+    {
+      "command": "finmenu",
+      "aliases": [
+        "finance",
+        "marketmenu"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/finmenu.js"
+    },
+    {
+      "command": "flashcard",
+      "aliases": [
+        "learn",
+        "quizcard",
+        "study"
+      ],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/education/flashcard.js"
+    },
+    {
+      "command": "flip",
+      "aliases": [
+        "mirror",
+        "upside"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/flip.js"
+    },
+    {
+      "command": "flirt",
+      "aliases": [
+        "flirty",
+        "pickuplines"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/flirt.js"
+    },
+    {
+      "command": "food",
+      "aliases": [
+        "foodapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/food.js"
+    },
+    {
+      "command": "football",
+      "aliases": [
+        "footballapi"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/football.js"
+    },
+    {
+      "command": "forwarded",
+      "aliases": [
+        "viral",
+        "fakeforward"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/forwarded.js"
+    },
+    {
+      "command": "fox",
+      "aliases": [
+        "foxapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/fox.js"
+    },
+    {
+      "command": "freeimage",
+      "aliases": [
+        "fimg",
+        "freeimg"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-freeimg.js"
+    },
+    {
+      "command": "funmenu",
+      "aliases": [
+        "fun",
+        "gamesmenu",
+        "mememenu"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/funmenu.js"
+    },
+    {
+      "command": "game",
+      "aliases": [
+        "gaming",
+        "gameimg"
+      ],
+      "category": "images",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gameImg.js"
+    },
+    {
+      "command": "game4menu",
+      "aliases": [
+        "g4menu",
+        "games4"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugin4/00-gamecenter.js"
+    },
+    {
+      "command": "game4players",
+      "aliases": [
+        "g4players"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugin4/00-gamecenter.js"
+    },
+    {
+      "command": "game4rank",
+      "aliases": [
+        "g4rank",
+        "game4leaderboard",
+        "g4lb"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugin4/00-gamecenter.js"
+    },
+    {
+      "command": "game4stats",
+      "aliases": [
+        "g4stats",
+        "gamestats"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugin4/00-gamecenter.js"
+    },
+    {
+      "command": "gamecancel",
+      "aliases": [
+        "game-cancel"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gameCommands.js"
+    },
+    {
+      "command": "gamemenu",
+      "aliases": [
+        "games",
+        "play",
+        "gamecenter"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/games.js"
+    },
+    {
+      "command": "gamerank",
+      "aliases": [
+        "gametop",
+        "game-rank",
+        "game-top"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gameCommands.js"
+    },
+    {
+      "command": "gamerules",
+      "aliases": [
+        "game-rules"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gameCommands.js"
+    },
+    {
+      "command": "gamestats",
+      "aliases": [
+        "game-stats"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gameCommands.js"
+    },
+    {
+      "command": "gcmenu",
+      "aliases": [
+        "gc",
+        "groupmenu",
+        "adminmenu"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gcmenu.js"
+    },
+    {
+      "command": "gdl",
+      "aliases": [
+        "gdl"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/gdl.js"
+    },
+    {
+      "command": "gdlv",
+      "aliases": [
+        "gdlv",
+        "gdlvideo"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/gdl.js"
+    },
+    {
+      "command": "gemini",
+      "aliases": [
+        "gem"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gemini.js"
+    },
+    {
+      "command": "gender",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_gender.js"
+    },
+    {
+      "command": "genderize",
+      "aliases": [
+        "genderizeapi"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/genderize.js"
+    },
+    {
+      "command": "genshin",
+      "aliases": [
+        "uid"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/genshin.js"
+    },
+    {
+      "command": "geodata",
+      "aliases": [
+        "geo",
+        "location"
+      ],
+      "category": "search",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/geodata.js"
+    },
+    {
+      "command": "getfile",
+      "aliases": [
+        "readfile",
+        "viewfile"
+      ],
+      "category": "owner",
+      "permission": "PRIMARY_OWNER",
+      "plugin": "plugins/getfile.js"
+    },
+    {
+      "command": "getpage",
+      "aliases": [
+        "source",
+        "viewsource"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/source.js"
+    },
+    {
+      "command": "getpp",
+      "aliases": [
+        "dlpp",
+        "profilepic",
+        "getdp"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/getpp.js"
+    },
+    {
+      "command": "getty",
+      "aliases": [
+        "gettyvideo",
+        "gettydl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/getty.js"
+    },
+    {
+      "command": "getxml",
+      "aliases": [
+        "randomxml",
+        "xml"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/getxml.js"
+    },
+    {
+      "command": "gif",
+      "aliases": [
+        "giphy",
+        "searchgif"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gif.js"
+    },
+    {
+      "command": "s",
+      "aliases": [
+        "gif2sticker",
+        "g2s",
+        "g2st",
+        "g2stick",
+        "videosticker",
+        "tosticker"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/gif2sticker.js"
+    },
+    {
+      "command": "gifsearch",
+      "aliases": [
+        "findgif"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/gifsearch.js"
+    },
+    {
+      "command": "gimage",
+      "aliases": [
+        "googleimage",
+        "gimg"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gimage.js"
+    },
+    {
+      "command": "github",
+      "aliases": [
+        "ghprofile",
+        "gh"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/github.js"
+    },
+    {
+      "command": "githubapi",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_github.js"
+    },
+    {
+      "command": "githublegacy",
+      "aliases": [
+        "ghlegacy"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gstalk.js"
+    },
+    {
+      "command": "gitinfo",
+      "aliases": [
+        "infogit"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/gitinfo.js"
+    },
+    {
+      "command": "gitpull",
+      "aliases": [
+        "pull"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/pull.js"
+    },
+    {
+      "command": "giveaway",
+      "aliases": [
+        "give",
+        "gw"
+      ],
+      "category": "group",
+      "permission": "GROUP_ONLY",
+      "plugin": "plugins2/giveaway.js"
+    },
+    {
+      "command": "glomp",
+      "aliases": [
+        "glompapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/glomp.js"
+    },
+    {
+      "command": "gmeme",
+      "aliases": [
+        "randommeme",
+        "searchmeme"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/gmeme.js"
+    },
+    {
+      "command": "goodbye",
+      "aliases": [
+        "bye",
+        "leave"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/goodbye.js"
+    },
+    {
+      "command": "goodnight",
+      "aliases": [
+        "gn",
+        "night"
+      ],
+      "category": "quotes",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/goodnight.js"
+    },
+    {
+      "command": "gpa",
+      "aliases": [],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "gpt",
+      "aliases": [
+        "ai",
+        "chat"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/ai.js"
+    },
+    {
+      "command": "grade",
+      "aliases": [
+        "marks"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "grayscale",
+      "aliases": [
+        "gray",
+        "grey"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/grayscale.js"
+    },
+    {
+      "command": "groupinfo",
+      "aliases": [
+        "ginfo",
+        "gcinfo",
+        "infogroup"
+      ],
+      "category": "group",
+      "permission": "GROUP_ONLY",
+      "plugin": "plugins/groupinfo.js"
+    },
+    {
+      "command": "guessage",
+      "aliases": [
+        "age",
+        "predictage"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/guessage.js"
+    },
+    {
+      "command": "hack",
+      "aliases": [
+        "fakehack",
+        "prankhack"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/hack.js"
+    },
+    {
+      "command": "handhold",
+      "aliases": [
+        "handholdapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/handhold.js"
+    },
+    {
+      "command": "handlecheck",
+      "aliases": [
+        "usernamecheck",
+        "handle"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/handlecheck.js"
+    },
+    {
+      "command": "handlelinks",
+      "aliases": [
+        "platformlinks"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/handlelinks.js"
+    },
+    {
+      "command": "handwrite",
+      "aliases": [
+        "hw",
+        "writehand"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/handwriting.js"
+    },
+    {
+      "command": "hangman",
+      "aliases": [
+        "hang",
+        "hm"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/hangman.js"
+    },
+    {
+      "command": "hashgen",
+      "aliases": [
+        "hash",
+        "gethash"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/hashgen.js"
+    },
+    {
+      "command": "headers",
+      "aliases": [
+        "httpcheck",
+        "sitescan",
+        "hdr"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/headers.js"
+    },
+    {
+      "command": "hidetag",
+      "aliases": [
+        "ht",
+        "htag"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/hidetag.js"
+    },
+    {
+      "command": "highfive",
+      "aliases": [
+        "highfiveapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/highfive.js"
+    },
+    {
+      "command": "hmod",
+      "aliases": [
+        "hmods",
+        "happymod"
+      ],
+      "category": "apks",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/hmod.js"
+    },
+    {
+      "command": "html2pdf",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_html2pdf.js"
+    },
+    {
+      "command": "hug",
+      "aliases": [
+        "hugapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/hug.js"
+    },
+    {
+      "command": "igs",
+      "aliases": [
+        "igsticker",
+        "instasticker"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/igs.js"
+    },
+    {
+      "command": "igsc",
+      "aliases": [
+        "igstickercrop",
+        "instacrop"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/igsc.js"
+    },
+    {
+      "command": "igsearch",
+      "aliases": [
+        "igs",
+        "instagramsearch",
+        "ig-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/igsearch.js"
+    },
+    {
+      "command": "image",
+      "aliases": [
+        "img"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/image.js"
+    },
+    {
+      "command": "images",
+      "aliases": [
+        "wallpics",
+        "pics"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/random-img.js"
+    },
+    {
+      "command": "imagine",
+      "aliases": [
+        "aiimage",
+        "draw",
+        "genimage"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/imagine.js"
+    },
+    {
+      "command": "imdb",
+      "aliases": [
+        "movie",
+        "film"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/imdb.js"
+    },
+    {
+      "command": "img2img",
+      "aliases": [
+        "image2image",
+        "imageedit"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/img2img.js"
+    },
+    {
+      "command": "img2pdf",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_img2pdf.js"
+    },
+    {
+      "command": "img2video",
+      "aliases": [
+        "image2video",
+        "imagetovideo"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/img2video.js"
+    },
+    {
+      "command": "inspect",
+      "aliases": [
+        "cat",
+        "readcode",
+        "getplugin"
+      ],
+      "category": "owner",
+      "permission": "PRIMARY_OWNER",
+      "plugin": "plugins/getplugin.js"
+    },
+    {
+      "command": "instagram",
+      "aliases": [
+        "igdl",
+        "insta"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/instagram.js"
+    },
+    {
+      "command": "instalk",
+      "aliases": [
+        "igstalk",
+        "igprofile",
+        "instaprofile"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/instalk.js"
+    },
+    {
+      "command": "insult",
+      "aliases": [
+        "roast",
+        "mock"
+      ],
+      "category": "group",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/insult.js"
+    },
+    {
+      "command": "invert",
+      "aliases": [
+        "negative"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/invert.js"
+    },
+    {
+      "command": "ipcheck",
+      "aliases": [
+        "ipvalidate",
+        "checkip"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/ipcheck.js"
+    },
+    {
+      "command": "ipinfo",
+      "aliases": [
+        "iprecon",
+        "iptrace"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/ipinfo.js"
+    },
+    {
+      "command": "isbn",
+      "aliases": [],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "islamic",
+      "aliases": [
+        "islampic",
+        "muslimpic"
+      ],
+      "category": "images",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/islamicImg.js"
+    },
+    {
+      "command": "islmenu",
+      "aliases": [
+        "islamic",
+        "isl",
+        "islsetup",
+        "islstatus",
+        "darood",
+        "namaz",
+        "dua",
+        "ayatulkursi",
+        "kalma",
+        "tasbih",
+        "jumma",
+        "hijri"
+      ],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/islamic.js"
+    },
+    {
+      "command": "istock",
+      "aliases": [
+        "istockdl",
+        "istockdownload"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/istock.js"
+    },
+    {
+      "command": "itunes",
+      "aliases": [
+        "track"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/itunes.js"
+    },
+    {
+      "command": "jailbreaks",
+      "aliases": [],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/jailbreak.js"
+    },
+    {
+      "command": "joke",
+      "aliases": [
+        "jokes",
+        "funny"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/joke.js"
+    },
+    {
+      "command": "joke-prog",
+      "aliases": [
+        "joke-progapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/joke-prog.js"
+    },
+    {
+      "command": "joke-pun",
+      "aliases": [
+        "joke-punapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/joke-pun.js"
+    },
+    {
+      "command": "joke2",
+      "aliases": [
+        "funny2",
+        "jokes2"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/joke2.js"
+    },
+    {
+      "command": "jwtdecode",
+      "aliases": [
+        "jwtinspect",
+        "decodejwt"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/jwtdecode.js"
+    },
+    {
+      "command": "kanye",
+      "aliases": [
+        "kanyeapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/kanye.js"
+    },
+    {
+      "command": "kick",
+      "aliases": [
+        "fire"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/kick.js"
+    },
+    {
+      "command": "king",
+      "aliases": [],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/king.js"
+    },
+    {
+      "command": "kingvideo",
+      "aliases": [],
+      "category": "cricket",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/kingvideo.js"
+    },
+    {
+      "command": "kiss",
+      "aliases": [
+        "kissapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/kiss.js"
+    },
+    {
+      "command": "length",
+      "aliases": [
+        "filelength",
+        "resize"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/resize.js"
+    },
+    {
+      "command": "linkedinjobs",
+      "aliases": [
+        "linjobs"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/linkedinjobs.js"
+    },
+    {
+      "command": "linkedinpeople",
+      "aliases": [
+        "linpeople",
+        "linkedinpeoplesearch"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/linkedinpeople.js"
+    },
+    {
+      "command": "linkedinposts",
+      "aliases": [
+        "linposts"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/linkedinposts.js"
+    },
+    {
+      "command": "listcmd",
+      "aliases": [
+        "cmdlist"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/listcmd.js"
+    },
+    {
+      "command": "litterbox",
+      "aliases": [
+        "tempup",
+        "litter",
+        "litr"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-litterbox.js"
+    },
+    {
+      "command": "loan",
+      "aliases": [
+        "borrow"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "lyrics",
+      "aliases": [
+        "lyric",
+        "songlyrics"
+      ],
+      "category": "music",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/lyrics.js"
+    },
+    {
+      "command": "maintenance",
+      "aliases": [
+        "mtnc",
+        "lockdown"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/maintenance.js"
+    },
+    {
+      "command": "manage",
+      "aliases": [
+        "ctrl",
+        "control"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/manage.js"
+    },
+    {
+      "command": "market",
+      "aliases": [
+        "rates",
+        "prices"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/market.js"
+    },
+    {
+      "command": "math",
+      "aliases": [
+        "maths",
+        "ganit"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/math.js"
+    },
+    {
+      "command": "mathfact",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_mathfact.js"
+    },
+    {
+      "command": "mediafire",
+      "aliases": [
+        "mfire",
+        "mf"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/mediafire.js"
+    },
+    {
+      "command": "mega",
+      "aliases": [
+        "megadl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/mega.js"
+    },
+    {
+      "command": "meme",
+      "aliases": [
+        "cheems",
+        "memes"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/meme.js"
+    },
+    {
+      "command": "memepack",
+      "aliases": [
+        "stickerbomb",
+        "memesticker"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/memepack.js"
+    },
+    {
+      "command": "mention",
+      "aliases": [
+        "setmention",
+        "mentionreply"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/mention.js"
+    },
+    {
+      "command": "menu",
+      "aliases": [
+        "help",
+        "commands",
+        "h",
+        "list"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/list.js"
+    },
+    {
+      "command": "menu2",
+      "aliases": [
+        "plugins2",
+        "newmenu"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/menu2.js"
+    },
+    {
+      "command": "meow",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_meow.js"
+    },
+    {
+      "command": "meowfact",
+      "aliases": [
+        "meowfactapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/meowfact.js"
+    },
+    {
+      "command": "mode",
+      "aliases": [
+        "botmode",
+        "setmode"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/mode.js"
+    },
+    {
+      "command": "mountain",
+      "aliases": [
+        "mountains",
+        "mountainimg"
+      ],
+      "category": "images",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/mountImg.js"
+    },
+    {
+      "command": "music",
+      "aliases": [],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_music.js"
+    },
+    {
+      "command": "mute",
+      "aliases": [
+        "silence"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/mute.js"
+    },
+    {
+      "command": "nasa",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_nasa.js"
+    },
+    {
+      "command": "nation",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_nation.js"
+    },
+    {
+      "command": "nationalize",
+      "aliases": [
+        "nationalizeapi"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/nationalize.js"
+    },
+    {
+      "command": "nba",
+      "aliases": [
+        "nbaapi"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/nba.js"
+    },
+    {
+      "command": "neko",
+      "aliases": [
+        "waifu"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/neko.js"
+    },
+    {
+      "command": "nekogif",
+      "aliases": [
+        "nekovid",
+        "ngif"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/nekogif.js"
+    },
+    {
+      "command": "nekogiflist",
+      "aliases": [
+        "nekogifcats",
+        "ngiflist"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/nekogif.js"
+    },
+    {
+      "command": "nekolist",
+      "aliases": [
+        "nekohelp",
+        "waifulist"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/nekolist.js"
+    },
+    {
+      "command": "news",
+      "aliases": [
+        "headlines",
+        "latestnews",
+        "newspk",
+        "paknews",
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/news.js"
+    },
+    {
+      "command": "newsmenu",
+      "aliases": [
+        "nmenu",
+        "newsources"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/newsmenu.js"
+    },
+    {
+      "command": "nfl",
+      "aliases": [
+        "nflapi"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/nfl.js"
+    },
+    {
+      "command": "nftoken",
+      "aliases": [
+        "netflix"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/nftoken.js"
+    },
+    {
+      "command": "nom",
+      "aliases": [
+        "nomapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/nom.js"
+    },
+    {
+      "command": "notes",
+      "aliases": [
+        "note"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/notes.js"
+    },
+    {
+      "command": "npm",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_npm.js"
+    },
+    {
+      "command": "npmstalk",
+      "aliases": [
+        "npmstlk"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/npmstalk.js"
+    },
+    {
+      "command": "numberfact",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_numberfact.js"
+    },
+    {
+      "command": "onlymenu",
+      "aliases": [
+        "listmenus"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/onlymenu.js"
+    },
+    {
+      "command": "owner",
+      "aliases": [
+        "creator"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/owner.js"
+    },
+    {
+      "command": "owners",
+      "aliases": [
+        "ownerlist",
+        "listowners"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins2/owners.js"
+    },
+    {
+      "command": "paknews",
+      "aliases": [
+        "newsinfo",
+        "latestpaknews"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/paknews.js"
+    },
+    {
+      "command": "paper",
+      "aliases": [
+        "papers"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "passcheck",
+      "aliases": [
+        "passwordcheck",
+        "pwdcheck",
+        "strength"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/passcheck.js"
+    },
+    {
+      "command": "passgen",
+      "aliases": [
+        "generatepass",
+        "pwdgen",
+        "genpass"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/passgen.js"
+    },
+    {
+      "command": "password",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_password.js"
+    },
+    {
+      "command": "pat",
+      "aliases": [
+        "patapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/pat.js"
+    },
+    {
+      "command": "perf",
+      "aliases": [
+        "metrics",
+        "diagnostics"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/stats.js"
+    },
+    {
+      "command": "periodic",
+      "aliases": [],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "pies",
+      "aliases": [
+        "pie"
+      ],
+      "category": "images",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/pies.js"
+    },
+    {
+      "command": "pindl",
+      "aliases": [
+        "pinterestdl",
+        "pindownload",
+        "pinterestvideo",
+        "pinvideo",
+        "pinterestdownloader"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/pindl.js"
+    },
+    {
+      "command": "ping",
+      "aliases": [
+        "p",
+        "pong"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/ping.js"
+    },
+    {
+      "command": "pingweb",
+      "aliases": [
+        "pweb"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/pingweb.js"
+    },
+    {
+      "command": "pinsearch",
+      "aliases": [
+        "psearch",
+        "pinterestsearch",
+        "pin-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/pinsearch.js"
+    },
+    {
+      "command": "pinstalk",
+      "aliases": [
+        "pstalk",
+        "pinprofile"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/pstalk.js"
+    },
+    {
+      "command": "pixhost",
+      "aliases": [
+        "ph",
+        "pix"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-pixhost.js"
+    },
+    {
+      "command": "pkcurrency",
+      "aliases": [
+        "pakcurrency"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/pakistan.js"
+    },
+    {
+      "command": "pkmenu",
+      "aliases": [
+        "pakistanmenu"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/pakistan.js"
+    },
+    {
+      "command": "pknews",
+      "aliases": [
+        "pakistannews"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/pakistan.js"
+    },
+    {
+      "command": "play",
+      "aliases": [
+        "song",
+        "plays",
+        "music",
+        "ytplay"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/play.js"
+    },
+    {
+      "command": "player",
+      "aliases": [
+        "playerapi"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/player.js"
+    },
+    {
+      "command": "pmblocker",
+      "aliases": [
+        "pmblock",
+        "blockpm",
+        "antipm"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/pmblocker.js"
+    },
+    {
+      "command": "poetry",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_poetry.js"
+    },
+    {
+      "command": "poke",
+      "aliases": [
+        "pokeapi"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/poke.js"
+    },
+    {
+      "command": "pokedex",
+      "aliases": [
+        "pokemon",
+        "poke"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/pokedex.js"
+    },
+    {
+      "command": "pollination",
+      "aliases": [
+        "pollinate"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/pollination.js"
+    },
+    {
+      "command": "pomf",
+      "aliases": [
+        "lain"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-pomf.js"
+    },
+    {
+      "command": "pomodoro",
+      "aliases": [
+        "focus"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "popcat",
+      "aliases": [
+        "popcatapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/popcat.js"
+    },
+    {
+      "command": "prefix",
+      "aliases": [
+        "prefixes"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/prefix.js"
+    },
+    {
+      "command": "probability",
+      "aliases": [
+        "prob"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "profilecard",
+      "aliases": [
+        "publiccard",
+        "shareprofile"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/profilecard.js"
+    },
+    {
+      "command": "profileqr",
+      "aliases": [
+        "socialqr"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/profileqr.js"
+    },
+    {
+      "command": "promote",
+      "aliases": [
+        "admin"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/promote.js"
+    },
+    {
+      "command": "pstore",
+      "aliases": [
+        "playstore"
+      ],
+      "category": "apks",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/pstore.js"
+    },
+    {
+      "command": "qmaker",
+      "aliases": [
+        "qmkr",
+        "quozio"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/quozio.js"
+    },
+    {
+      "command": "qr",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_qr.js"
+    },
+    {
+      "command": "qrcode",
+      "aliases": [
+        "qr"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/qrcode.js"
+    },
+    {
+      "command": "quax",
+      "aliases": [
+        "qu",
+        "qx"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-quax.js"
+    },
+    {
+      "command": "quote",
+      "aliases": [
+        "quotes",
+        "quotetext"
+      ],
+      "category": "quotes",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/quote.js"
+    },
+    {
+      "command": "quote2",
+      "aliases": [
+        "quotes2",
+        "randomquote"
+      ],
+      "category": "quotes",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/quote2.js"
+    },
+    {
+      "command": "quoted",
+      "aliases": [
+        "q",
+        "fakereply"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/quoted.js"
+    },
+    {
+      "command": "randomhex",
+      "aliases": [
+        "hexgen",
+        "tokenhex"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/randomhex.js"
+    },
+    {
+      "command": "randomuser",
+      "aliases": [
+        "randomuserapi"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/randomuser.js"
+    },
+    {
+      "command": "rank",
+      "aliases": [
+        "top",
+        "topusers",
+        "leaderboard",
+        "ranks"
+      ],
+      "category": "group",
+      "permission": "GROUP_ONLY",
+      "plugin": "plugins/rank.js"
+    },
+    {
+      "command": "reaction",
+      "aliases": [
+        "react"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/reaction.js"
+    },
+    {
+      "command": "reactionlist",
+      "aliases": [
+        "rlist",
+        "reactions",
+        "reaction-list"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/reactionlist.js"
+    },
+    {
+      "command": "readmore",
+      "aliases": [
+        "rmadd",
+        "readadd"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/readmore.js"
+    },
+    {
+      "command": "readqr",
+      "aliases": [
+        "qrread",
+        "decodeqr"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/readqr.js"
+    },
+    {
+      "command": "redditdl",
+      "aliases": [
+        "reddownload"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/abixsocial.js"
+    },
+    {
+      "command": "redditmeme",
+      "aliases": [
+        "rmeme",
+        "reddit",
+        "dankmeme"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/redditmeme.js"
+    },
+    {
+      "command": "redditsearch",
+      "aliases": [
+        "rsearch",
+        "reddit-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/redditsearch.js"
+    },
+    {
+      "command": "reload",
+      "aliases": [
+        "refresh",
+        "reloadplugins"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/reload.js"
+    },
+    {
+      "command": "remini",
+      "aliases": [
+        "enhance",
+        "upscale"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/remini.js"
+    },
+    {
+      "command": "removebg",
+      "aliases": [
+        "rmbg",
+        "bgremove"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/removebg.js"
+    },
+    {
+      "command": "resetlink",
+      "aliases": [
+        "revoke",
+        "newlink"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/resetlink.js"
+    },
+    {
+      "command": "reverse",
+      "aliases": [
+        "revt",
+        "reversetext"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/reverse.js"
+    },
+    {
+      "command": "richest",
+      "aliases": [
+        "econlb"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "riddle",
+      "aliases": [
+        "paheli",
+        "brainteaser",
+        "puzzle"
+      ],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/education/riddle.js"
+    },
+    {
+      "command": "ringtone",
+      "aliases": [
+        "ring",
+        "tone"
+      ],
+      "category": "music",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/ringtone.js"
+    },
+    {
+      "command": "roseday",
+      "aliases": [
+        "rose",
+        "rosequote"
+      ],
+      "category": "quotes",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/roseday.js"
+    },
+    {
+      "command": "s2img",
+      "aliases": [
+        "s2i",
+        "simage",
+        "stoimg",
+        "sticker2image"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/simage.js"
+    },
+    {
+      "command": "scloud",
+      "aliases": [
+        "scsearch",
+        "soundcloud"
+      ],
+      "category": "music",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/scloud.js"
+    },
+    {
+      "command": "screenshot",
+      "aliases": [
+        "ss",
+        "ssweb"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/ss.js"
+    },
+    {
+      "command": "script",
+      "aliases": [
+        "repo",
+        "sc"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/github.js"
+    },
+    {
+      "command": "secmenu",
+      "aliases": [
+        "cybermenu",
+        "securitymenu",
+        "hackmenu",
+        "sec"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/secmenu.js"
+    },
+    {
+      "command": "secretmask",
+      "aliases": [
+        "masksecret",
+        "redact"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/secretmask.js"
+    },
+    {
+      "command": "securityheaders",
+      "aliases": [
+        "headerhelp",
+        "headershelp"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/securityheaders.js"
+    },
+    {
+      "command": "securitytips",
+      "aliases": [
+        "securitycheck",
+        "cybertips",
+        "seccheck"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/securitytips.js"
+    },
+    {
+      "command": "sendjailbreaks",
+      "aliases": [
+        "sj"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/sendjailbreaks.js"
+    },
+    {
+      "command": "sendtochannel",
+      "aliases": [
+        "stc",
+        "fc",
+        "forwardchannel",
+        "channelforward"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/sendtochannel.js"
+    },
+    {
+      "command": "seo",
+      "aliases": [
+        "seoanalyse",
+        "seotools"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/seo.js"
+    },
+    {
+      "command": "sepia",
+      "aliases": [
+        "vintage"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sepia.js"
+    },
+    {
+      "command": "serif",
+      "aliases": [
+        "seriftest"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/serif.js"
+    },
+    {
+      "command": "setbio",
+      "aliases": [
+        "autobio",
+        "bio"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/setbio.js"
+    },
+    {
+      "command": "setcmd",
+      "aliases": [
+        "addcmd"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins/setcmd.js"
+    },
+    {
+      "command": "setgdesc",
+      "aliases": [
+        "setdesc",
+        "groupdesc"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/setgdesc.js"
+    },
+    {
+      "command": "setgname",
+      "aliases": [
+        "setname",
+        "groupname"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/setgname.js"
+    },
+    {
+      "command": "setgpp",
+      "aliases": [
+        "setgpic",
+        "grouppp",
+        "setgrouppic"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/setgpp.js"
+    },
+    {
+      "command": "setpp",
+      "aliases": [
+        "setppic",
+        "setdp"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/setpp.js"
+    },
+    {
+      "command": "setprefix",
+      "aliases": [],
+      "category": "owner",
+      "permission": "PRIMARY_OWNER",
+      "plugin": "plugins2/setprefix.js"
+    },
+    {
+      "command": "settings",
+      "aliases": [
+        "config",
+        "setting"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/settings.js"
+    },
+    {
+      "command": "sfile",
+      "aliases": [
+        "sfl",
+        "sfileapk"
+      ],
+      "category": "apks",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sfile.js"
+    },
+    {
+      "command": "sfw",
+      "aliases": [
+        "sweeb"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sfw.js"
+    },
+    {
+      "command": "sharechat",
+      "aliases": [
+        "sharechatdl",
+        "sharechatvideo"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sharechat.js"
+    },
+    {
+      "command": "sharpen",
+      "aliases": [
+        "sharpenplus"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sharpen.js"
+    },
+    {
+      "command": "shayari",
+      "aliases": [
+        "poetry",
+        "shayar"
+      ],
+      "category": "quotes",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/shayari.js"
+    },
+    {
+      "command": "shazam",
+      "aliases": [
+        "whatmusic",
+        "songid"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/shazam.js"
+    },
+    {
+      "command": "shiba",
+      "aliases": [
+        "shibaapi"
+      ],
+      "category": "image",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/shiba.js"
+    },
+    {
+      "command": "ship",
+      "aliases": [
+        "couple"
+      ],
+      "category": "group",
+      "permission": "GROUP_ONLY",
+      "plugin": "plugins/ship.js"
+    },
+    {
+      "command": "shorturl",
+      "aliases": [],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_shorturl.js"
+    },
+    {
+      "command": "simp",
+      "aliases": [
+        "simpcard"
+      ],
+      "category": "group",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/simp.js"
+    },
+    {
+      "command": "slap",
+      "aliases": [
+        "slapapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/slap.js"
+    },
+    {
+      "command": "slidermenu",
+      "aliases": [
+        "slider",
+        "carousel"
+      ],
+      "category": "system",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/slidermenu.js"
+    },
+    {
+      "command": "smallcaps",
+      "aliases": [
+        "tinytext",
+        "mini"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tinytext.js"
+    },
+    {
+      "command": "smenu",
+      "aliases": [
+        "shelp",
+        "smart"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/smartmenu.js"
+    },
+    {
+      "command": "smile",
+      "aliases": [
+        "smileapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/smile.js"
+    },
+    {
+      "command": "smug",
+      "aliases": [
+        "smugapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/smug.js"
+    },
+    {
+      "command": "snack",
+      "aliases": [
+        "snackvideo",
+        "snackdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/snackvideo.js"
+    },
+    {
+      "command": "snapchat",
+      "aliases": [
+        "scspot",
+        "snapdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/snapchat.js"
+    },
+    {
+      "command": "snapprofile",
+      "aliases": [
+        "snapsearch"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/snapprofile.js"
+    },
+    {
+      "command": "socialcompare",
+      "aliases": [
+        "scompare"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/socialcompare.js"
+    },
+    {
+      "command": "sociallinks",
+      "aliases": [
+        "findsocial",
+        "profilelinks"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/sociallinks.js"
+    },
+    {
+      "command": "socialmenu",
+      "aliases": [
+        "social",
+        "socials"
+      ],
+      "category": "social",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/socialmenu.js"
+    },
+    {
+      "command": "solve",
+      "aliases": [
+        "mathsteps"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "sora",
+      "aliases": [
+        "txt2video",
+        "aiVideo"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sora.js"
+    },
+    {
+      "command": "sounddl",
+      "aliases": [
+        "scdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/abixsocial.js"
+    },
+    {
+      "command": "spoiler",
+      "aliases": [
+        "spoil",
+        "sps"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/spoiler.js"
+    },
+    {
+      "command": "spoof",
+      "aliases": [
+        "fakestatus",
+        "mockstatus"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/spoof.js"
+    },
+    {
+      "command": "spotify",
+      "aliases": [
+        "sp",
+        "spotifydl",
+        "spot"
+      ],
+      "category": "downloader",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/spotify.js"
+    },
+    {
+      "command": "spotifyplay",
+      "aliases": [
+        "sfplay"
+      ],
+      "category": "downloader",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/spotifyplay.js"
+    },
+    {
+      "command": "staff",
+      "aliases": [
+        "admins",
+        "adminlist"
+      ],
+      "category": "group",
+      "permission": "GROUP_ONLY",
+      "plugin": "plugins/staff.js"
+    },
+    {
+      "command": "stalk",
+      "aliases": [
+        "stalkk",
+        "osint"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/stalk.js"
+    },
+    {
+      "command": "stalkmenu",
+      "aliases": [
+        "osintmenu",
+        "publicprofile"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/stalkmenu.js"
+    },
+    {
+      "command": "stalkscore",
+      "aliases": [
+        "profilescore"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/stalkscore.js"
+    },
+    {
+      "command": "statistics",
+      "aliases": [
+        "statsstudy"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "stats",
+      "aliases": [],
+      "category": "system",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "stealth",
+      "aliases": [
+        "alwaysonline",
+        "stealthmode"
+      ],
+      "category": "owner",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/stealth.js"
+    },
+    {
+      "command": "stext",
+      "aliases": [
+        "fancytext",
+        "textstyle",
+        "styletext"
+      ],
+      "category": "menu",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/styletext.js"
+    },
+    {
+      "command": "sticker",
+      "aliases": [
+        "stik",
+        "s"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sticker-alt.js"
+    },
+    {
+      "command": "sticker2",
+      "aliases": [
+        "s2",
+        "stik2"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/sticker2.js"
+    },
+    {
+      "command": "sticker2gif",
+      "aliases": [
+        "s2g",
+        "stogif",
+        "tomp4",
+        "stickertomp4"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/sticker2gif.js"
+    },
+    {
+      "command": "stickers",
+      "aliases": [
+        "stickersearch",
+        "ssticker"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/stickers.js"
+    },
+    {
+      "command": "storage",
+      "aliases": [
+        "space",
+        "disk",
+        "stor"
+      ],
+      "category": "system",
+      "permission": "OWNER",
+      "plugin": "plugins2/storage.js"
+    },
+    {
+      "command": "string",
+      "aliases": [
+        "textinfo",
+        "textstats"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/string.js"
+    },
+    {
+      "command": "stt",
+      "aliases": [
+        "voicetotext",
+        "v2t",
+        "transcribe"
+      ],
+      "category": "language",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stt.js"
+    },
+    {
+      "command": "studymenu",
+      "aliases": [
+        "studymenu2"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "stupid",
+      "aliases": [
+        "stupidcard",
+        "dumb"
+      ],
+      "category": "group",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/stupid.js"
+    },
+    {
+      "command": "tag",
+      "aliases": [
+        "tagall",
+        "hidetag"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/tag.js"
+    },
+    {
+      "command": "tagall",
+      "aliases": [
+        "everyone",
+        "all"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/tagall.js"
+    },
+    {
+      "command": "tagnotadmin",
+      "aliases": [
+        "tagmembers",
+        "tagnon"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/tagnotadmin.js"
+    },
+    {
+      "command": "take",
+      "aliases": [
+        "steal",
+        "wm"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/take.js"
+    },
+    {
+      "command": "team",
+      "aliases": [
+        "teamapi"
+      ],
+      "category": "sports",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/team.js"
+    },
+    {
+      "command": "tech",
+      "aliases": [
+        "technology",
+        "techimg"
+      ],
+      "category": "images",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/techImg.js"
+    },
+    {
+      "command": "teddy",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/teddy.js"
+    },
+    {
+      "command": "telanswer",
+      "aliases": [
+        "telenoranswer",
+        "telenoranswers"
+      ],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/telanswer.js"
+    },
+    {
+      "command": "terabox",
+      "aliases": [
+        "tera",
+        "tbox",
+        "tbdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/terabox.js"
+    },
+    {
+      "command": "tgpack",
+      "aliases": [
+        "tgstickers",
+        "telegrampack"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/tgpack.js"
+    },
+    {
+      "command": "tgstalk",
+      "aliases": [
+        "tguser",
+        "tginfo"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tgstalk.js"
+    },
+    {
+      "command": "tgstk",
+      "aliases": [
+        "telegram",
+        "tgsticker"
+      ],
+      "category": "stickers",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/stickertelegram.js"
+    },
+    {
+      "command": "threadsearch",
+      "aliases": [
+        "threadssearch",
+        "thread-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/threadsearch.js"
+    },
+    {
+      "command": "thrstalk",
+      "aliases": [
+        "threadsprofile",
+        "threadsuser"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tstalk.js"
+    },
+    {
+      "command": "tictactoe",
+      "aliases": [
+        "ttt",
+        "xo"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tictactoe.js"
+    },
+    {
+      "command": "tiktok",
+      "aliases": [
+        "ttdl",
+        "tiktokdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tiktok.js"
+    },
+    {
+      "command": "tinyurl",
+      "aliases": [
+        "shorten",
+        "tiny"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tiny.js"
+    },
+    {
+      "command": "tmpfiles",
+      "aliases": [
+        "tmpf",
+        "tfiles"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-tmpfile.js"
+    },
+    {
+      "command": "tourl",
+      "aliases": [
+        "mediaurl",
+        "upload"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tourl.js"
+    },
+    {
+      "command": "transactions",
+      "aliases": [
+        "tx"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "transfer",
+      "aliases": [
+        "pay",
+        "send"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "translate",
+      "aliases": [
+        "trt"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/translate.js"
+    },
+    {
+      "command": "trends",
+      "aliases": [
+        "trend",
+        "trending"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/trends.js"
+    },
+    {
+      "command": "trivia",
+      "aliases": [
+        "quiz"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/trivia.js"
+    },
+    {
+      "command": "truth",
+      "aliases": [
+        "truthdare"
+      ],
+      "category": "games",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/truth.js"
+    },
+    {
+      "command": "ttprofile",
+      "aliases": [
+        "tiktokprofile"
+      ],
+      "category": "social",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/ttprofile.js"
+    },
+    {
+      "command": "tts",
+      "aliases": [
+        "texttospeech"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/tts.js"
+    },
+    {
+      "command": "ttsearch",
+      "aliases": [
+        "tts",
+        "tiktoksearch",
+        "tt-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/ttsearch.js"
+    },
+    {
+      "command": "ttstalk",
+      "aliases": [
+        "tikstalk"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/ttstalk.js"
+    },
+    {
+      "command": "twitter",
+      "aliases": [
+        "xtweet",
+        "tweetdl",
+        "twitterdl"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/twitter.js"
+    },
+    {
+      "command": "txt2img",
+      "aliases": [
+        "text2image",
+        "texttoimage"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/txt2img.js"
+    },
+    {
+      "command": "txt2video",
+      "aliases": [
+        "text2video",
+        "texttovideo"
+      ],
+      "category": "ai",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/txt2video.js"
+    },
+    {
+      "command": "uguu",
+      "aliases": [
+        "ug",
+        "uguuse"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-uguuse.js"
+    },
+    {
+      "command": "unb64",
+      "aliases": [
+        "ubase64",
+        "dec64",
+        "deb64"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/unb64.js"
+    },
+    {
+      "command": "unban",
+      "aliases": [
+        "pardon"
+      ],
+      "category": "admin",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/unban.js"
+    },
+    {
+      "command": "unit",
+      "aliases": [
+        "convertunit"
+      ],
+      "category": "study",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/study.js"
+    },
+    {
+      "command": "university",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_university.js"
+    },
+    {
+      "command": "unmute",
+      "aliases": [
+        "unsilence"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/unmute.js"
+    },
+    {
+      "command": "unshorten",
+      "aliases": [
+        "expand",
+        "trace"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/unshort.js"
+    },
+    {
+      "command": "update",
+      "aliases": [
+        "upgrade",
+        "restart"
+      ],
+      "category": "owner",
+      "permission": "PRIMARY_OWNER",
+      "plugin": "plugins/update.js"
+    },
+    {
+      "command": "uptime",
+      "aliases": [
+        "runtime"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/uptime.js"
+    },
+    {
+      "command": "urban",
+      "aliases": [
+        "slang",
+        "udict"
+      ],
+      "category": "search",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/urban.js"
+    },
+    {
+      "command": "url",
+      "aliases": [
+        "geturl"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/url.js"
+    },
+    {
+      "command": "urlcheck",
+      "aliases": [
+        "urlinspect",
+        "linkcheck"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/urlcheck.js"
+    },
+    {
+      "command": "uselessfact",
+      "aliases": [
+        "uselessfactapi"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/uselessfact.js"
+    },
+    {
+      "command": "userfind",
+      "aliases": [
+        "profilefind"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/userfind.js"
+    },
+    {
+      "command": "usernameaesthetic",
+      "aliases": [
+        "aestheticuser",
+        "userstyle"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/usernameaesthetic.js"
+    },
+    {
+      "command": "usernamegen",
+      "aliases": [
+        "usergen"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/usernamegen.js"
+    },
+    {
+      "command": "usernameinfo",
+      "aliases": [
+        "handleinfo"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/usernameinfo.js"
+    },
+    {
+      "command": "uuid",
+      "aliases": [
+        "uuidgen",
+        "guid"
+      ],
+      "category": "security",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/security/uuid.js"
+    },
+    {
+      "command": "vcard",
+      "aliases": [
+        "contactcard"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/stalk/vcard.js"
+    },
+    {
+      "command": "video",
+      "aliases": [
+        "ytmp4"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/video.js"
+    },
+    {
+      "command": "vidsplay",
+      "aliases": [
+        "vidsplaydl",
+        "vidsplayvideo"
+      ],
+      "category": "download",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/vidsplay.js"
+    },
+    {
+      "command": "viewonce",
+      "aliases": [
+        "viewmedia",
+        "vv"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/viewonce.js"
+    },
+    {
+      "command": "vnote",
+      "aliases": [
+        "voicenote",
+        "vn"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/vnote.js"
+    },
+    {
+      "command": "voicemenu",
+      "aliases": [
+        "langmenu",
+        "speechmenu",
+        "vm"
+      ],
+      "category": "general",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/voicemenu.js"
+    },
+    {
+      "command": "walink",
+      "aliases": [
+        "wa",
+        "waid"
+      ],
+      "category": "tools",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/wa.js"
+    },
+    {
+      "command": "wallpaper",
+      "aliases": [
+        "wp",
+        "wpmenu",
+        "4k",
+        "wall",
+        "wallp"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/wallpaper.js"
+    },
+    {
+      "command": "wallpaper2",
+      "aliases": [
+        "theme",
+        "vstheme"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/vstheme.js"
+    },
+    {
+      "command": "warn",
+      "aliases": [
+        "warning"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/warn.js"
+    },
+    {
+      "command": "warnings",
+      "aliases": [
+        "checkwarn",
+        "warncount"
+      ],
+      "category": "group",
+      "permission": "GROUP_ONLY",
+      "plugin": "plugins/warnings.js"
+    },
+    {
+      "command": "wasted",
+      "aliases": [
+        "waste"
+      ],
+      "category": "group",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/wasted.js"
+    },
+    {
+      "command": "watch",
+      "aliases": [
+        "feeds",
+        "autonews",
+        "getupdates"
+      ],
+      "category": "owner",
+      "permission": "OWNER",
+      "plugin": "plugins2/watch.js"
+    },
+    {
+      "command": "wattpad",
+      "aliases": [
+        "wattpadsearch",
+        "searchwattpad"
+      ],
+      "category": "search",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/wattpad.js"
+    },
+    {
+      "command": "wave",
+      "aliases": [
+        "waveapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/wave.js"
+    },
+    {
+      "command": "weather",
+      "aliases": [
+        "forecast",
+        "climate"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/weather.js"
+    },
+    {
+      "command": "weatherinfo",
+      "aliases": [
+        "forecast7",
+        "cityweather"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/weatherinfo.js"
+    },
+    {
+      "command": "welcome",
+      "aliases": [
+        "setwelcome"
+      ],
+      "category": "admin",
+      "permission": "GROUP_ADMIN",
+      "plugin": "plugins/welcome.js"
+    },
+    {
+      "command": "whois",
+      "aliases": [
+        "domaininfo"
+      ],
+      "category": "info",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/whois.js"
+    },
+    {
+      "command": "whoisip",
+      "aliases": [
+        "ip",
+        "iplookup"
+      ],
+      "category": "search",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/iplookup.js"
+    },
+    {
+      "command": "why",
+      "aliases": [
+        "whyme",
+        "question"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/why.js"
+    },
+    {
+      "command": "wiki",
+      "aliases": [
+        "wikipedia"
+      ],
+      "category": "search",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/wikipedia.js"
+    },
+    {
+      "command": "wikipedia",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_wikipedia.js"
+    },
+    {
+      "command": "withdraw",
+      "aliases": [
+        "bankwith"
+      ],
+      "category": "economy",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/ideaCommands.js"
+    },
+    {
+      "command": "woof",
+      "aliases": [],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_woof.js"
+    },
+    {
+      "command": "wpr",
+      "aliases": [
+        "wallrandom",
+        "randwallpaper",
+        "randomwp"
+      ],
+      "category": "utility",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/wallpaperrandom.js"
+    },
+    {
+      "command": "wyr",
+      "aliases": [
+        "wouldyourather"
+      ],
+      "category": "quotes",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/wyr.js"
+    },
+    {
+      "command": "xoat",
+      "aliases": [
+        "x0at",
+        "x0"
+      ],
+      "category": "upload",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/u-xoat.js"
+    },
+    {
+      "command": "xsearch",
+      "aliases": [
+        "twsearch",
+        "twittersearch",
+        "x-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/xsearch.js"
+    },
+    {
+      "command": "xstalk",
+      "aliases": [
+        "twstalk",
+        "xprofile"
+      ],
+      "category": "stalk",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/xstalk.js"
+    },
+    {
+      "command": "yearfact",
+      "aliases": [],
+      "category": "education",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/api_yearfact.js"
+    },
+    {
+      "command": "yeet",
+      "aliases": [
+        "yeetapi"
+      ],
+      "category": "anime",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/yeet.js"
+    },
+    {
+      "command": "yesno",
+      "aliases": [
+        "yesnoapi",
+        "yn"
+      ],
+      "category": "fun",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/yesno.js"
+    },
+    {
+      "command": "ytplay2",
+      "aliases": [
+        "playyt2"
+      ],
+      "category": "media",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins/ytplay2.js"
+    },
+    {
+      "command": "ytsearch",
+      "aliases": [
+        "yts",
+        "youtubesearch",
+        "yt-s"
+      ],
+      "category": "UNKNOWN",
+      "permission": "PUBLIC/DEFAULT",
+      "plugin": "plugins2/4tstyle/ytsearch.js"
+    }
+  ]
+}

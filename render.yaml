@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: abix-ae
+    runtime: docker
+    plan: 1c-2g
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    maxShutdownDelaySeconds: 60
+    autoDeployTrigger: commit
+    disk:
+      name: abix-ae-data
+      mountPath: /var/data
+      sizeGB: 2
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: SESSION_DIR
+        value: /var/data/session
+      - key: BOT_NAME
+        value: ABIX-AE
+      - key: BOT_PREFIX
+        value: "-"
+      - key: TIMEZONE
+        value: Asia/Karachi
+      - key: GEMINI_BACKEND
+        value: official
+      - key: GEMINI_USE_WEB2API
+        value: "false"
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: FFMPEG_PATH
+        value: /usr/bin/ffmpeg
+      - key: BOT_MEMORY_WARN_MB
+        value: "1200"
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=1280
+      - key: OWNER_NUMBER
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false

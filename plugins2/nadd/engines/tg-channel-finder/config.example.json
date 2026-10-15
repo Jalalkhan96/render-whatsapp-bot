@@ -1,0 +1,1 @@
+{"_notes":"Get token from @BotFather on Telegram. Put your numeric Telegram user id in admins (message @userinfobot to get it). Leave admins empty to auto-claim on first /start.","admins":[],"dataFile":"./data.json","pollTimeoutSec":30,"token":"PUT_BOT_TOKEN_HERE"}

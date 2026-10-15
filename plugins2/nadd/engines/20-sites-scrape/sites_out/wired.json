@@ -1,0 +1,16 @@
+{
+ "site": "WIRED",
+ "home": "https://www.wired.com",
+ "status": "ok",
+ "articles": [
+  {
+   "title": "WIRED App Landing Page",
+   "description": "",
+   "published": "2026-09-10T15:38:55.892Z",
+   "body": "The best way to stay close to our journalism, our experts, and what's coming next.\nA personalized Daily Digest built around topics and writers that interest you.\nWith original video, vertical podcasts, and more in the Watch tab.\nListen to podcasts, narrated stories, and playlists wherever your day takes you.\nGo live with WIRED journalists and experts in AMAs, ask them yourself, and jump into the comments.\nTurn on notifications for breaking stories.",
+   "url": "https://www.wired.com/story/app/splash"
+  }
+ ],
+ "errors": [],
+ "links_found": 1
+}

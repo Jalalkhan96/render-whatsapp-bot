@@ -1,0 +1,79 @@
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  api:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./data:/data
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  worker:
+    build: .
+    restart: unless-stopped
+    # overrides the image's default uvicorn CMD
+    command: celery -A app.workers.celery_app.celery worker --loglevel=info --concurrency=2 -Q downloads
+    env_file: .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./data:/data
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  beat:
+    build: .
+    restart: unless-stopped
+    command: celery -A app.workers.celery_app.celery beat --loglevel=info
+    env_file: .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  # Optional reverse proxy (SSE-friendly: buffering disabled in nginx.conf).
+  # Start with:  docker compose --profile proxy up --build
+  nginx:
+    image: nginx:alpine
+    profiles: ["proxy"]
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+
+  # Optional free public HTTPS URL for the API (no account needed).
+  # Start with:  docker compose --profile tunnel up --build
+  # Then run:    docker compose logs -f tunnel
+  # and copy the https://<random>.trycloudflare.com URL it prints.
+  # Set that URL as PUBLIC_BASE_URL in .env so /api/info advertises it.
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    profiles: ["tunnel"]
+    restart: "no"
+    command: tunnel --no-autoupdate --url http://api:8000
+    depends_on:
+      - api
+
+volumes:
+  redis-data:

@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-06T17:21:50.135Z",
+  "games": {
+    "twentyquestions": {
+      "game": "twentyquestions",
+      "players": {
+        "72305774440506@lid": {
+          "jid": "72305774440506@lid",
+          "actions": 1,
+          "rounds": 1,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "points": 0,
+          "lastPlayed": "2026-09-27T18:20:59.411Z"
+        }
+      },
+      "totalActions": 1,
+      "totalRounds": 1,
+      "totalWins": 0,
+      "totalLosses": 0,
+      "totalDraws": 0
+    },
+    "connect4": {
+      "game": "connect4",
+      "players": {
+        "72305774440506@lid": {
+          "jid": "72305774440506@lid",
+          "actions": 3,
+          "rounds": 2,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "points": 0,
+          "lastPlayed": "2026-09-28T19:35:05.011Z"
+        }
+      },
+      "totalActions": 3,
+      "totalRounds": 2,
+      "totalWins": 0,
+      "totalLosses": 0,
+      "totalDraws": 0
+    },
+    "numguess": {
+      "game": "numguess",
+      "players": {
+        "72305774440506@lid": {
+          "jid": "72305774440506@lid",
+          "actions": 8,
+          "rounds": 2,
+          "wins": 1,
+          "losses": 0,
+          "draws": 0,
+          "points": 3,
+          "lastPlayed": "2026-09-28T19:45:20.594Z"
+        }
+      },
+      "totalActions": 8,
+      "totalRounds": 2,
+      "totalWins": 1,
+      "totalLosses": 0,
+      "totalDraws": 0
+    },
+    "tebakgambar": {
+      "game": "tebakgambar",
+      "players": {
+        "72305774440506@lid": {
+          "jid": "72305774440506@lid",
+          "actions": 1,
+          "rounds": 1,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "points": 0,
+          "lastPlayed": "2026-09-30T09:21:44.695Z"
+        }
+      },
+      "totalActions": 1,
+      "totalRounds": 1,
+      "totalWins": 0,
+      "totalLosses": 0,
+      "totalDraws": 0
+    },
+    "dice": {
+      "game": "dice",
+      "players": {
+        "72305774440506@lid": {
+          "jid": "72305774440506@lid",
+          "actions": 1,
+          "rounds": 1,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "points": 0,
+          "lastPlayed": "2026-10-04T14:38:57.147Z"
+        }
+      },
+      "totalActions": 1,
+      "totalRounds": 1,
+      "totalWins": 0,
+      "totalLosses": 0,
+      "totalDraws": 0
+    },
+    "rps": {
+      "game": "rps",
+      "players": {
+        "72305774440506@lid": {
+          "jid": "72305774440506@lid",
+          "actions": 1,
+          "rounds": 1,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "points": 0,
+          "lastPlayed": "2026-10-05T01:16:07.982Z"
+        }
+      },
+      "totalActions": 1,
+      "totalRounds": 1,
+      "totalWins": 0,
+      "totalLosses": 0,
+      "totalDraws": 0
+    },
+    "memory": {
+      "game": "memory",
+      "players": {
+        "72305774440506@lid": {
+          "jid": "72305774440506@lid",
+          "actions": 1,
+          "rounds": 1,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "points": 0,
+          "lastPlayed": "2026-10-06T17:21:50.135Z"
+        }
+      },
+      "totalActions": 1,
+      "totalRounds": 1,
+      "totalWins": 0,
+      "totalLosses": 0,
+      "totalDraws": 0
+    }
+  }
+}

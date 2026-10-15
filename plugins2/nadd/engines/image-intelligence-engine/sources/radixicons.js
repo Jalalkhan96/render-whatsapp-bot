@@ -1,0 +1,109 @@
+'use strict';
+// Radix Icons adapter — MIT icons via the GitHub repo radix-ui/icons + jsDelivr.
+// GitHub transport: package data from /v1/packages/gh/radix-ui/icons and files
+// served from cdn.jsdelivr.net/gh/radix-ui/icons@<version><filepath>.
+// Matching is against the kebab-case basename. License honesty: MIT.
+const PKG = 'radix-ui/icons';
+const BASE = 'https://data.jsdelivr.com/v1/packages/gh/' + PKG;
+const CDN = 'https://cdn.jsdelivr.net/gh/' + PKG + '@';
+
+function flatten(files, out) {
+  for (const f of files || []) {
+    if (!f) continue;
+    if (f.type === 'directory' && Array.isArray(f.files)) flatten(f.files, out);
+    else if (typeof f.name === 'string') out.push(f.name);
+  }
+}
+
+function tokens(s) {
+  return String(s || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+function pickName(path) {
+  const m = path.match(/([^/]+)\.svg$/i);
+  return m ? m[1] : null;
+}
+
+function matchScore(name, query) {
+  const qt = tokens(query);
+  if (!qt.length) return 0;
+  const bt = tokens(name);
+  const overlap = qt.filter((t) => bt.some((b) => b === t || b.indexOf(t) === 0 || t.indexOf(b) === 0)).length;
+  return overlap > 0 ? overlap : -1;
+}
+
+async function search(query, options, ctx) {
+  const limit = Math.min(Math.max(parseInt((options && options.limit) || 20, 10) || 20, 1), 50);
+  const r = await ctx.http.get(BASE, { timeout: 20000 });
+  if (r.status >= 400) throw new Error(`HTTP ${r.status} for ${BASE}`);
+  const json = r.json();
+  let files = json.files;
+  let version = json.version || 'latest';
+  if (!files && Array.isArray(json.versions) && json.versions.length) {
+    // Bare package endpoint returns metadata only; resolve the file tree via
+    // the versioned endpoint. Unverified shape fallback, documented here.
+    const v = json.versions[0].version || (json.tags && json.tags.latest) || 'latest';
+    const treeUrl = BASE + '@' + v;
+    const r2 = await ctx.http.get(treeUrl, { timeout: 20000 });
+    if (r2.status >= 400) throw new Error(`HTTP ${r2.status} for ${treeUrl}`);
+    const j2 = r2.json();
+    files = j2.files;
+    version = j2.version || v;
+  }
+  if (!files) throw new Error(`Unexpected jsDelivr response shape for ${PKG}`);
+  const paths = [];
+  flatten(files, paths);
+  const scored = [];
+  for (const p of paths) {
+    if (!/\.svg$/i.test(p)) continue;
+    const name = pickName(p);
+    if (!name) continue;
+    const score = matchScore(name, query);
+    if (score >= 0) scored.push({ score, name, path: p });
+  }
+  scored.sort((a, b) => b.score - a.score || (a.name < b.name ? -1 : 1));
+  return scored.slice(0, limit).map((s) => ({
+    name: s.name, path: s.path, svgUrl: CDN + version + s.path, version, pkg: PKG,
+  }));
+}
+
+function mapResult(raw) {
+  raw = raw || {};
+  return {
+    sourceId: raw.name,
+    imageUrl: raw.svgUrl,
+    thumbnailUrl: raw.svgUrl,
+    downloadUrl: raw.svgUrl,
+    sourceUrl: 'https://www.jsdelivr.com/package/gh/' + PKG,
+    title: raw.name,
+    format: 'svg',
+    license: 'MIT',
+    licenseUrl: 'https://opensource.org/licenses/MIT',
+    licenseType: 'mit',
+    attributionRequired: false,
+    commercialUse: true,
+    modificationAllowed: true,
+    metadata: { pkg: raw.pkg, version: raw.version, path: raw.path },
+  };
+}
+
+module.exports = {
+  id: 'radixicons',
+  name: 'Radix Icons',
+  website: 'https://www.radix-ui.com/icons',
+  type: 'icon',
+  transport: 'package',
+  docsUrl: 'https://data.jsdelivr.com/v1/packages/gh/radix-ui/icons',
+  endpointVerified: false,
+  requiresKey: false,
+  envKey: null,
+  enabled: true,
+  priority: 85,
+  tags: ['icon'],
+  categories: ['icon'],
+  capabilities: { search: true, metadata: true, download: true, api: false, publicPage: false, vectors: true, illustrations: false, wallpapers: false, licenseMetadata: true },
+  rateLimit: { requestsPerMinute: 30, delayMs: 500, dailyLimit: null },
+  defaultLicense: { license: 'MIT', licenseUrl: 'https://opensource.org/licenses/MIT', licenseType: 'mit', attributionRequired: false, commercialUse: true, modificationAllowed: true, notes: 'MIT per repo LICENSE; include copyright notice in redistributions.' },
+  search,
+  mapResult,
+};

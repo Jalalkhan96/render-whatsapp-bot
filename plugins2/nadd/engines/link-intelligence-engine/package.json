@@ -1,0 +1,12 @@
+{
+  "name": "link-intelligence-engine",
+  "version": "1.0.0",
+  "description": "Link Intelligence Engine: URL shortener + expander + redirect tracer + link checker + safety analysis (CommonJS)",
+  "main": "link-manager.js",
+  "scripts": {
+    "test": "node tests/run.js",
+    "health": "node health-manager.js --check"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
